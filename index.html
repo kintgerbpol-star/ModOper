@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Modelo de Operación – Servicios de Red</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="topbar">
+    <div class="title">Modelo de Operación – Servicios de Red</div>
+
+    <div class="selectors">
+        <select id="serviceSelect" onchange="loadContent()">
+            <option value="">Selecciona un servicio</option>
+            <option value="IPAM">IPAM</option>
+            <option value="Route53">Route53</option>
+            <option value="CertificadosF5">Certificados F5</option>
+            <option value="SaaSCDN">SaaS CDN</option>
+            <option value="SaaSDNS">SaaS DNS</option>
+            <option value="SaaSLB">SaaS LB</option>
+        </select>
+
+        <select id="sectionSelect" onchange="loadContent()">
+            <option value="">Selecciona una sección</option>
+            <option value="1Proposito">1. Propósito</option>
+            <option value="2Alcance">2. Alcance</option>
+            <option value="3DescServicio">3. Descripción del Servicio</option>
+            <option value="4Stakeholders">4. Stakeholders</option>
+            <option value="5Gobierno">5. Gobierno</option>
+            <option value="6RACI">6. RACI</option>
+            <option value="7ProcOperativos">7. Procesos Operativos</option>
+            <option value="8Accesos">8. Accesos</option>
+            <option value="9Monitoreo">9. Monitoreo</option>
+            <option value="10Responsables">10. Responsables</option>
+            <option value="11Transicion">11. Transición</option>
+        </select>
+    </div>
+</header>
+
+<main class="content">
+    <iframe id="contentFrame"></iframe>
+</main>
+
+<script src="js/navigation.js"></script>
+
+</body>
+</html>

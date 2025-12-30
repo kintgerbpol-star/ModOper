@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>5. Modelo de Gobierno</title>
+<style>
+    body {
+        font-family: "Segoe UI", Arial, sans-serif;
+        margin: 60px;
+        color: #1f2933;
+        line-height: 1.6;
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 28px;
+        border-bottom: 3px solid #1f4fd8;
+        padding-bottom: 12px;
+        margin-bottom: 40px;
+    }
+
+    h2 {
+        font-size: 20px;
+        margin-top: 35px;
+        color: #1f4fd8;
+    }
+
+    h3 {
+        font-size: 16px;
+        margin-top: 25px;
+        color: #1f4fd8;
+    }
+
+    p {
+        font-size: 14px;
+        margin: 12px 0;
+        text-align: justify;
+    }
+
+    ul {
+        margin-left: 25px;
+    }
+
+    li {
+        margin: 8px 0;
+        font-size: 14px;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 15px;
+    }
+
+    th, td {
+        border: 1px solid #ccc;
+        padding: 8px;
+        text-align: left;
+        font-size: 14px;
+    }
+
+    th {
+        background-color: #f0f3f7;
+    }
+
+    .footer {
+        margin-top: 60px;
+        font-size: 12px;
+        color: #666;
+        border-top: 1px solid #ccc;
+        padding-top: 10px;
+        text-align: center;
+    }
+</style>
+</head>
+<body>
+
+<h1>5. Modelo de Gobierno</h1>
+
+<h2>5.1 Objetivo del modelo de gobierno</h2>
+<p>
+El modelo de gobierno del servicio DNS tiene como objetivo garantizar que la toma de decisiones, la operación y la evolución del servicio se realicen de manera controlada, segura y alineada con los objetivos del negocio, asegurando:
+</p>
+<ul>
+    <li>Separación clara de responsabilidades.</li>
+    <li>Control efectivo del riesgo operativo y de seguridad.</li>
+    <li>Trazabilidad de decisiones y cambios.</li>
+    <li>Cumplimiento de políticas internas y buenas prácticas (ITIL).</li>
+</ul>
+
+<h2>5.2 Principios de gobierno</h2>
+<ul>
+    <li>Separación de funciones: ninguna función crítica debe concentrarse en un solo equipo.</li>
+    <li>Responsabilidad clara: cada actividad tiene un responsable definido.</li>
+    <li>Gobierno sobre operación: las decisiones estratégicas no se ejecutan de forma operativa.</li>
+    <li>Trazabilidad: todas las acciones deben ser auditables.</li>
+    <li>Automatización controlada: priorización de automatización bajo estándares definidos.</li>
+    <li>Gestión de riesgo integrada: los riesgos se evalúan antes de ejecutar cambios relevantes.</li>
+</ul>
+
+<h2>5.3 Estructura de gobierno</h2>
+<p>El gobierno del servicio se ejerce mediante la interacción coordinada de los siguientes actores:</p>
+
+<h3>Public Cloud (AWS)</h3>
+<ul>
+    <li>Gobierna la plataforma tecnológica.</li>
+    <li>Define y aplica controles sobre la infraestructura DNS.</li>
+    <li>Garantiza la disponibilidad del servicio base.</li>
+</ul>
+
+<h3>Network Platform – Network Services</h3>
+<ul>
+    <li>Define la arquitectura del servicio DNS.</li>
+    <li>Establece estándares técnicos y patrones de diseño.</li>
+    <li>Aprueba cambios técnicos de impacto medio y alto.</li>
+    <li>Evalúa implicaciones técnicas y de escalabilidad.</li>
+</ul>
+
+<h3>IT Ops – Network Services</h3>
+<ul>
+    <li>Ejecuta la operación diaria conforme a los lineamientos establecidos.</li>
+    <li>Atiende incidentes operativos.</li>
+    <li>Escala situaciones que exceden su ámbito de control.</li>
+</ul>
+
+<h3>Network Platform – NetFactory</h3>
+<ul>
+    <li>Implementa automatizaciones y despliegues.</li>
+    <li>Garantiza consistencia técnica y repetibilidad.</li>
+    <li>Apoya los procesos de transición y mejora continua.</li>
+</ul>
+
+<h3>CISO</h3>
+<ul>
+    <li>Define políticas de seguridad aplicables al servicio.</li>
+    <li>Aprueba cambios de alto impacto.</li>
+    <li>Supervisa el cumplimiento normativo.</li>
+    <li>Gestiona excepciones de seguridad.</li>
+</ul>
+
+<h2>5.4 Modelo de toma de decisiones</h2>
+<table>
+    <tr>
+        <th>Tipo de decisión</th>
+        <th>Responsable</th>
+        <th>Participación</th>
+    </tr>
+    <tr>
+        <td>Estratégica</td>
+        <td>CISO</td>
+        <td>Public Cloud / Network Platform</td>
+    </tr>
+    <tr>
+        <td>Técnica (arquitectura)</td>
+        <td>Network Platform</td>
+        <td>Public Cloud / NetFactory</td>
+    </tr>
+    <tr>
+        <td>Operativa</td>
+        <td>IT Ops</td>
+        <td>Network Platform</td>
+    </tr>
+    <tr>
+        <td>Automatización</td>
+        <td>NetFactory</td>
+        <td>Network Platform</td>
+    </tr>
+    <tr>
+        <td>Seguridad</td>
+        <td>CISO</td>
+        <td>Todos</td>
+    </tr>
+</table>
+
+<h2>5.5 Mecanismos de control</h2>
+<ul>
+    <li>Flujos formales de aprobación mediante ITSM.</li>
+    <li>Registro y trazabilidad de cambios.</li>
+    <li>Evidencia documentada para auditoría.</li>
+    <li>Revisión periódica de controles y procesos.</li>
+    <li>Evaluación de riesgos ante cambios relevantes.</li>
+</ul>
+
+<h2>5.6 Escalamiento y resolución de conflictos</h2>
+<p>Cuando exista un conflicto operativo, técnico o de gobierno, se seguirá el siguiente esquema de escalamiento:</p>
+<ol>
+    <li>IT Ops – Network Services intentará resolver el incidente dentro de su ámbito operativo.</li>
+    <li>En caso de requerir decisiones técnicas o de arquitectura, se escalará a Network Platform – Network Services.</li>
+    <li>Si el evento impacta la plataforma o excede los límites definidos, se involucrará a Public Cloud (AWS).</li>
+    <li>En situaciones que representen riesgo de seguridad, cumplimiento o impacto crítico al negocio, se escalará al CISO, quien definirá la acción a seguir.</li>
+</ol>
+
+<div class="footer">
+Documento oficial – Uso interno
+</div>
+
+</body>
+</html>

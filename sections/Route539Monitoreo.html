@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>9. Monitoreo y Métricas</title>
+<style>
+    body {
+        font-family: "Segoe UI", Arial, sans-serif;
+        margin: 60px;
+        color: #1f2933;
+        line-height: 1.6;
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 28px;
+        border-bottom: 3px solid #1f4fd8;
+        padding-bottom: 12px;
+        margin-bottom: 40px;
+    }
+
+    h2 {
+        font-size: 20px;
+        margin-top: 35px;
+        color: #1f4fd8;
+    }
+
+    h3 {
+        font-size: 16px;
+        margin-top: 25px;
+        color: #1f4fd8;
+    }
+
+    p {
+        font-size: 14px;
+        margin: 12px 0;
+        text-align: justify;
+    }
+
+    ul {
+        margin-left: 25px;
+    }
+
+    li {
+        margin: 8px 0;
+        font-size: 14px;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 15px;
+    }
+
+    th, td {
+        border: 1px solid #ccc;
+        padding: 8px;
+        text-align: left;
+        font-size: 14px;
+    }
+
+    th {
+        background-color: #f0f3f7;
+    }
+
+    .footer {
+        margin-top: 60px;
+        font-size: 12px;
+        color: #666;
+        border-top: 1px solid #ccc;
+        padding-top: 10px;
+        text-align: center;
+    }
+</style>
+</head>
+<body>
+
+<h1>9. Monitoreo y Métricas</h1>
+
+<h2>9.1 Objetivo</h2>
+<p>
+El objetivo del proceso de Monitoreo y Métricas es asegurar la visibilidad continua del estado, desempeño y disponibilidad del servicio DNS, permitiendo la detección temprana de incidentes, la evaluación del desempeño operativo y la toma de decisiones basada en información confiable.
+</p>
+
+<h2>9.2 Alcance</h2>
+<p>El monitoreo aplica a:</p>
+<ul>
+    <li>Disponibilidad del servicio DNS.</li>
+    <li>Resolución de nombres y tiempos de respuesta.</li>
+    <li>Cambios ejecutados y su impacto.</li>
+    <li>Errores operativos y eventos relevantes.</li>
+    <li>Actividades relacionadas con seguridad y accesos.</li>
+</ul>
+
+<h2>9.3 Entrega de información de monitoreo</h2>
+<p>
+El equipo de Public Cloud (AWS) será responsable de proveer la información de monitoreo existente correspondiente a:
+</p>
+<ul>
+    <li>El servicio Route 53.</li>
+    <li>Los componentes relevantes de la plataforma AWS que soportan el servicio DNS.</li>
+</ul>
+
+<p>
+Esta información incluye métricas, eventos y alertas ya disponibles en la plataforma, y servirá como insumo para:
+</p>
+<ul>
+    <li>La detección temprana de incidentes.</li>
+    <li>El análisis de comportamiento del servicio.</li>
+    <li>La atención operativa por parte de los equipos correspondientes.</li>
+</ul>
+
+<p>
+El alcance de esta responsabilidad no incluye la creación de nuevos mecanismos de monitoreo, salvo que se acuerde explícitamente entre Public Cloud (AWS) y Network Platform – Network Services.
+</p>
+
+<h2>9.4 Métricas clave (KPIs)</h2>
+
+<h3>Métricas operativas</h3>
+<ul>
+    <li>Disponibilidad del servicio DNS.</li>
+    <li>Tiempos de resolución (latencia DNS).</li>
+    <li>Número de incidentes por periodo.</li>
+    <li>Tiempo medio de resolución (MTTR).</li>
+    <li>Número de cambios ejecutados con éxito.</li>
+</ul>
+
+<h3>Métricas de estabilidad y calidad</h3>
+<ul>
+    <li>Incidentes recurrentes.</li>
+    <li>Cambios fallidos o revertidos.</li>
+    <li>Desviaciones de configuración detectadas.</li>
+</ul>
+
+<h3>Métricas de seguridad</h3>
+<ul>
+    <li>Eventos de acceso no autorizado.</li>
+    <li>Incidentes de seguridad relacionados con DNS.</li>
+    <li>Cumplimiento de controles de acceso.</li>
+</ul>
+
+<h2>9.5 Umbrales y alertamiento</h2>
+<ul>
+    <li>Se deben definir umbrales para cada métrica crítica.</li>
+    <li>Las alertas deben ser claras, accionables y dirigidas al equipo correspondiente.</li>
+    <li>Las alertas críticas deben escalarse conforme al proceso de Gestión de Incidentes.</li>
+</ul>
+
+<h2>9.6 Roles y responsabilidades</h2>
+<table>
+    <tr>
+        <th>Rol</th>
+        <th>Responsabilidad</th>
+    </tr>
+    <tr>
+        <td>IT Ops – Network Services</td>
+        <td>Monitoreo operativo diario y atención inicial.</td>
+    </tr>
+    <tr>
+        <td>Network Platform – Network Services</td>
+        <td>Análisis avanzado y mejora continua.</td>
+    </tr>
+    <tr>
+        <td>Public Cloud (AWS)</td>
+        <td>Proveer información de monitoreo existente de AWS y Route 53.</td>
+    </tr>
+    <tr>
+        <td>Network Platform – NetFactory</td>
+        <td>Integración de métricas en automatizaciones.</td>
+    </tr>
+    <tr>
+        <td>CISO</td>
+        <td>Supervisión de métricas de seguridad y cumplimiento.</td>
+    </tr>
+</table>
+
+<h2>9.7 Integración con otros procesos</h2>
+<ul>
+    <li>Gestión de Incidentes, para detección temprana y respuesta.</li>
+    <li>Gestión de Cambios, para validar impacto posterior a modificaciones.</li>
+    <li>Gestión de Riesgos, para identificar tendencias y patrones.</li>
+    <li>Gestión de Seguridad, para control y cumplimiento.</li>
+</ul>
+
+<div class="footer">
+Documento oficial – Uso interno
+</div>
+
+</body>
+</html>

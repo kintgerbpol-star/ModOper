@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>8. Gestión de Seguridad y Accesos</title>
+<style>
+    body {
+        font-family: "Segoe UI", Arial, sans-serif;
+        margin: 60px;
+        color: #1f2933;
+        line-height: 1.6;
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 28px;
+        border-bottom: 3px solid #1f4fd8;
+        padding-bottom: 12px;
+        margin-bottom: 40px;
+    }
+
+    h2 {
+        font-size: 20px;
+        margin-top: 35px;
+        color: #1f4fd8;
+    }
+
+    h3 {
+        font-size: 16px;
+        margin-top: 25px;
+        color: #1f4fd8;
+    }
+
+    p {
+        font-size: 14px;
+        margin: 12px 0;
+        text-align: justify;
+    }
+
+    ul {
+        margin-left: 25px;
+    }
+
+    li {
+        margin: 8px 0;
+        font-size: 14px;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 15px;
+    }
+
+    th, td {
+        border: 1px solid #ccc;
+        padding: 8px;
+        text-align: left;
+        font-size: 14px;
+    }
+
+    th {
+        background-color: #f0f3f7;
+    }
+
+    .footer {
+        margin-top: 60px;
+        font-size: 12px;
+        color: #666;
+        border-top: 1px solid #ccc;
+        padding-top: 10px;
+        text-align: center;
+    }
+</style>
+</head>
+<body>
+
+<h1>8. Gestión de Seguridad y Accesos</h1>
+
+<h2>8.1 Objetivo</h2>
+<p>
+La Gestión de Seguridad y Accesos tiene como objetivo garantizar la confidencialidad, integridad y disponibilidad del servicio DNS, asegurando que los accesos estén correctamente definidos, controlados y auditables, conforme a las políticas de seguridad de la organización y a las mejores prácticas de AWS.
+</p>
+
+<h2>8.2 Alcance</h2>
+<p>Esta sección aplica a:</p>
+<ul>
+    <li>Accesos al servicio DNS en Amazon Route 53.</li>
+    <li>Definición de roles y permisos por función organizacional.</li>
+    <li>Gestión de identidades y accesos.</li>
+    <li>Auditoría y control del uso de privilegios.</li>
+</ul>
+
+<h2>8.3 Principios de seguridad</h2>
+<ul>
+    <li>Mínimo privilegio: cada rol cuenta únicamente con los permisos necesarios.</li>
+    <li>Separación de funciones: ningún rol concentra funciones críticas incompatibles.</li>
+    <li>Trazabilidad: todas las acciones deben ser auditables.</li>
+    <li>Acceso basado en roles: no se otorgan permisos directos a usuarios.</li>
+    <li>Gobierno centralizado: la definición de accesos sigue un modelo controlado.</li>
+</ul>
+
+<h2>8.4 Modelo de control de accesos en AWS (Route 53)</h2>
+<p>
+El control de acceso al servicio DNS se realiza mediante AWS IAM, utilizando roles y políticas asociadas a funciones organizacionales.
+</p>
+<p>Principios clave:</p>
+<ul>
+    <li>No se utilizan usuarios individuales para la operación del servicio.</li>
+    <li>El acceso se otorga mediante roles IAM.</li>
+    <li>Los roles son asumidos de forma temporal.</li>
+    <li>Todas las acciones quedan registradas en los servicios de auditoría de AWS.</li>
+    <li>La definición final de nombres y estructuras de permisos es responsabilidad de Public Cloud (AWS).</li>
+</ul>
+
+<h2>8.5 Definición de perfiles de acceso</h2>
+<p>
+A continuación se describe el perfil funcional de cada grupo y los permisos asociados a Route 53.
+Los permisos listados representan capacidades funcionales, no implementaciones técnicas finales.
+</p>
+
+<h3>8.5.1 Public Cloud (AWS)</h3>
+<p><strong>Rol:</strong> Administración de plataforma y control de accesos.</p>
+<p><strong>Responsabilidades:</strong></p>
+<ul>
+    <li>Definir la estructura de roles IAM.</li>
+    <li>Validar la nomenclatura y consistencia de los permisos.</li>
+    <li>Administrar el acceso a Route 53 a nivel plataforma.</li>
+</ul>
+<p><strong>Permisos funcionales típicos:</strong></p>
+<ul>
+    <li>route53:CreateHostedZone</li>
+    <li>route53:DeleteHostedZone</li>
+    <li>route53:AssociateVPCWithHostedZone</li>
+    <li>route53:DisassociateVPCFromHostedZone</li>
+    <li>route53:ListHostedZones</li>
+    <li>route53:GetHostedZone</li>
+</ul>
+
+<h3>8.5.2 Network Platform – Network Services</h3>
+<p><strong>Rol:</strong> Gobierno técnico del servicio DNS.</p>
+<p><strong>Responsabilidades:</strong></p>
+<ul>
+    <li>Definir cómo debe operar el servicio DNS.</li>
+    <li>Validar cambios estructurales.</li>
+    <li>Ejecutar tareas operativas en caso de escalamiento desde IT Ops.</li>
+</ul>
+<p><strong>Permisos funcionales típicos:</strong></p>
+<ul>
+    <li>route53:ListHostedZones</li>
+    <li>route53:GetHostedZone</li>
+    <li>route53:ListResourceRecordSets</li>
+    <li>route53:ChangeResourceRecordSets</li>
+    <li>route53:GetChange</li>
+</ul>
+
+<h3>8.5.3 IT Ops – Network Services</h3>
+<p><strong>Rol:</strong> Operación diaria del servicio DNS.</p>
+<p><strong>Responsabilidades:</strong></p>
+<ul>
+    <li>Ejecución de cambios operativos.</li>
+    <li>Atención de solicitudes e incidentes.</li>
+    <li>Validación básica del servicio.</li>
+</ul>
+<p><strong>Permisos funcionales típicos:</strong></p>
+<ul>
+    <li>route53:ChangeResourceRecordSets</li>
+    <li>route53:GetChange</li>
+    <li>route53:ListResourceRecordSets</li>
+</ul>
+
+<h3>8.5.4 Network Platform – NetFactory</h3>
+<p><strong>Rol:</strong> Automatización y despliegue controlado.</p>
+<p><strong>Responsabilidades:</strong></p>
+<ul>
+    <li>Ejecución de automatizaciones.</li>
+    <li>Integración con pipelines CI/CD.</li>
+    <li>Uso de roles técnicos de corta duración.</li>
+</ul>
+<p><strong>Permisos funcionales típicos:</strong></p>
+<ul>
+    <li>route53:ChangeResourceRecordSets</li>
+    <li>route53:GetChange</li>
+</ul>
+
+<h3>8.5.5 CISO</h3>
+<p><strong>Rol:</strong> Gobierno, riesgo y cumplimiento.</p>
+<p><strong>Responsabilidades:</strong></p>
+<ul>
+    <li>Supervisión de controles de acceso.</li>
+    <li>Aprobación de excepciones.</li>
+    <li>Revisión de cumplimiento normativo.</li>
+</ul>
+<p><strong>Permisos funcionales típicos:</strong></p>
+<ul>
+    <li>route53:ListHostedZones</li>
+    <li>route53:GetHostedZone</li>
+    <li>Acceso a registros y auditoría (solo lectura).</li>
+</ul>
+
+<h2>8.6 Gestión de identidades y accesos</h2>
+<ul>
+    <li>Los accesos deben integrarse con el sistema corporativo de identidad.</li>
+    <li>Se debe aplicar MFA cuando esté disponible.</li>
+    <li>Los accesos deben revisarse periódicamente.</li>
+    <li>Las bajas y cambios deben aplicarse de forma inmediata.</li>
+</ul>
+
+<h2>8.7 Monitoreo y auditoría de accesos</h2>
+<ul>
+    <li>Todas las acciones deben quedar registradas.</li>
+    <li>Los eventos deben integrarse con los procesos de auditoría.</li>
+    <li>Accesos sospechosos deben tratarse como incidentes de seguridad.</li>
+</ul>
+
+<h2>8.8 Gestión de excepciones</h2>
+<ul>
+    <li>Las excepciones deben documentarse y justificarse.</li>
+    <li>Requieren aprobación del CISO.</li>
+    <li>Deben tener fecha de expiración y revisión periódica.</li>
+</ul>
+
+<div class="footer">
+Documento oficial – Uso interno
+</div>
+
+</body>
+</html>

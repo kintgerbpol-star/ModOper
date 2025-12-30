@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>7.4 Gestión de Riesgos Operativos</title>
+<style>
+    body {
+        font-family: "Segoe UI", Arial, sans-serif;
+        margin: 60px;
+        color: #1f2933;
+        line-height: 1.6;
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 28px;
+        border-bottom: 3px solid #1f4fd8;
+        padding-bottom: 12px;
+        margin-bottom: 40px;
+    }
+
+    h2 {
+        font-size: 20px;
+        margin-top: 35px;
+        color: #1f4fd8;
+    }
+
+    h3 {
+        font-size: 16px;
+        margin-top: 25px;
+        color: #1f4fd8;
+    }
+
+    p {
+        font-size: 14px;
+        margin: 12px 0;
+        text-align: justify;
+    }
+
+    ul {
+        margin-left: 25px;
+    }
+
+    li {
+        margin: 8px 0;
+        font-size: 14px;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 15px;
+    }
+
+    th, td {
+        border: 1px solid #ccc;
+        padding: 8px;
+        text-align: left;
+        font-size: 14px;
+    }
+
+    th {
+        background-color: #f0f3f7;
+    }
+
+    .footer {
+        margin-top: 60px;
+        font-size: 12px;
+        color: #666;
+        border-top: 1px solid #ccc;
+        padding-top: 10px;
+        text-align: center;
+    }
+</style>
+</head>
+<body>
+
+<h1>7.4 Gestión de Riesgos Operativos</h1>
+
+<h2>7.4.1 Objetivo</h2>
+<p>
+El objetivo de la Gestión de Riesgos Operativos es identificar, evaluar, mitigar y monitorear los riesgos asociados a la operación del servicio DNS, reduciendo la probabilidad e impacto de eventos que puedan afectar la continuidad del servicio, la seguridad o el cumplimiento normativo.
+</p>
+
+<h2>7.4.2 Alcance</h2>
+<p>La gestión de riesgos operativos aplica a:</p>
+<ul>
+    <li>Operación diaria del servicio DNS.</li>
+    <li>Cambios operativos y técnicos.</li>
+    <li>Automatizaciones y despliegues.</li>
+    <li>Incidentes y eventos recurrentes.</li>
+    <li>Dependencias internas y externas que impacten el servicio.</li>
+</ul>
+
+<h2>7.4.3 Tipos de riesgos considerados</h2>
+
+<h3>Riesgos operativos</h3>
+<ul>
+    <li>Errores humanos durante la operación.</li>
+    <li>Configuraciones incorrectas.</li>
+    <li>Fallas en la ejecución de cambios.</li>
+    <li>Dependencia de personal clave.</li>
+</ul>
+
+<h3>Riesgos técnicos</h3>
+<ul>
+    <li>Fallas en la resolución DNS.</li>
+    <li>Comportamiento inesperado de políticas de enrutamiento.</li>
+    <li>Errores derivados de automatizaciones.</li>
+    <li>Degradación del servicio por configuraciones incorrectas.</li>
+</ul>
+
+<h3>Riesgos de seguridad</h3>
+<ul>
+    <li>Accesos no autorizados.</li>
+    <li>Cambios no aprobados.</li>
+    <li>Exposición de información sensible.</li>
+    <li>Incumplimiento de controles de seguridad.</li>
+</ul>
+
+<h2>7.4.4 Gestión del riesgo</h2>
+<p>La gestión del riesgo se realiza de la siguiente manera:</p>
+<ol>
+    <li><strong>Identificación del riesgo:</strong> El riesgo puede identificarse durante la operación, cambios, incidentes o revisiones periódicas.</li>
+    <li><strong>Registro del riesgo:</strong> Todo riesgo identificado debe ser registrado en el sistema corporativo de gestión de riesgos <strong>Heracles</strong>, incluyendo su descripción, impacto y probabilidad.</li>
+    <li><strong>Evaluación del impacto:</strong> Se analiza el impacto técnico, operativo y de negocio asociado al riesgo.</li>
+    <li><strong>Definición de acciones de mitigación:</strong> Se establecen acciones correctivas o preventivas para reducir el riesgo.</li>
+    <li><strong>Aprobación del riesgo:</strong>
+        <ul>
+            <li>Riesgos operativos: aprobados por Network Platform – Network Services.</li>
+            <li>Riesgos de seguridad: aprobados por el CISO.</li>
+        </ul>
+    </li>
+    <li><strong>Ejecución y seguimiento:</strong> Las acciones de mitigación se ejecutan y su efectividad es monitoreada de forma continua.</li>
+</ol>
+
+<h2>7.4.5 Roles y responsabilidades</h2>
+<table>
+    <tr>
+        <th>Rol</th>
+        <th>Responsabilidad</th>
+    </tr>
+    <tr>
+        <td>IT Ops – Network Services</td>
+        <td>Identificación temprana de riesgos operativos.</td>
+    </tr>
+    <tr>
+        <td>Network Platform – Network Services</td>
+        <td>Evaluación técnica y definición de mitigaciones.</td>
+    </tr>
+    <tr>
+        <td>Public Cloud (AWS)</td>
+        <td>Mitigación de riesgos asociados a la plataforma.</td>
+    </tr>
+    <tr>
+        <td>Network Platform – NetFactory</td>
+        <td>Implementación técnica de acciones correctivas.</td>
+    </tr>
+    <tr>
+        <td>CISO</td>
+        <td>Aprobación y gobierno de riesgos de seguridad.</td>
+    </tr>
+</table>
+
+<h2>7.4.6 Integración con otros procesos</h2>
+<ul>
+    <li>Gestión de Cambios, para evaluar riesgos antes de ejecutar modificaciones.</li>
+    <li>Gestión de Incidentes, para prevenir recurrencia de eventos.</li>
+    <li>Gestión de Seguridad, para control y cumplimiento normativo.</li>
+    <li>Auditoría, para seguimiento y mejora continua.</li>
+</ul>
+
+<h2>7.4.7 Registro y seguimiento</h2>
+<ul>
+    <li>Todos los riesgos deben documentarse en <strong>Heracles</strong>.</li>
+    <li>Cada riesgo debe contar con un responsable, nivel de impacto y plan de tratamiento.</li>
+    <li>Los riesgos deben revisarse periódicamente y actualizarse según su evolución.</li>
+</ul>
+
+<div class="footer">
+Documento oficial – Uso interno
+</div>
+
+</body>
+</html>

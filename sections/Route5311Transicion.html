@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>11. Requerimientos para la Transición</title>
+<style>
+    body {
+        font-family: "Segoe UI", Arial, sans-serif;
+        margin: 60px;
+        color: #1f2933;
+        line-height: 1.6;
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 28px;
+        border-bottom: 3px solid #1f4fd8;
+        padding-bottom: 12px;
+        margin-bottom: 40px;
+    }
+
+    h2 {
+        font-size: 20px;
+        margin-top: 35px;
+        color: #1f4fd8;
+    }
+
+    h3 {
+        font-size: 16px;
+        margin-top: 25px;
+        color: #1f4fd8;
+    }
+
+    p {
+        font-size: 14px;
+        margin: 12px 0;
+        text-align: justify;
+    }
+
+    ul {
+        margin-left: 25px;
+    }
+
+    li {
+        margin: 8px 0;
+        font-size: 14px;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 15px;
+    }
+
+    th, td {
+        border: 1px solid #ccc;
+        padding: 8px;
+        text-align: left;
+        font-size: 14px;
+    }
+
+    th {
+        background-color: #f0f3f7;
+    }
+
+    .footer {
+        margin-top: 60px;
+        font-size: 12px;
+        color: #666;
+        border-top: 1px solid #ccc;
+        padding-top: 10px;
+        text-align: center;
+    }
+</style>
+</head>
+<body>
+
+<h1>11. Requerimientos para la Transición</h1>
+
+<h2>11.1 Objetivo</h2>
+<p>
+Definir de manera clara y verificable los entregables que el equipo de Public Cloud (AWS) debe proporcionar para permitir que Network Platform – Network Services y IT Ops – Network Services puedan asumir la operación del servicio DNS conforme al modelo definido en este documento.
+</p>
+
+<h2>11.2 Enfoque de la transición</h2>
+<p>La transición se basa en los siguientes principios:</p>
+<ul>
+    <li>La operación no inicia sin entregables validados.</li>
+    <li>La responsabilidad operativa inicia una vez completada la transferencia de conocimiento.</li>
+    <li>El equipo de Public Cloud (AWS) es responsable de habilitar técnica y documentalmente la operación.</li>
+    <li>Network Services no asume actividades sin visibilidad completa del entorno.</li>
+</ul>
+
+<h2>11.3 Entregables requeridos por parte de Public Cloud (AWS)</h2>
+
+<h3>11.3.1 Arquitectura y configuración del servicio DNS</h3>
+<ul>
+    <li>Diagrama actualizado de arquitectura DNS.</li>
+    <li>Listado de Hosted Zones existentes.</li>
+    <li>Relación de VPCs asociadas a cada Hosted Zone.</li>
+    <li>Dependencias técnicas relevantes.</li>
+</ul>
+
+<h3>11.3.2 Inventario de configuraciones</h3>
+<ul>
+    <li>Registros DNS activos.</li>
+    <li>Políticas de enrutamiento configuradas (si aplican).</li>
+    <li>Integraciones relevantes con otros servicios AWS.</li>
+    <li>Configuraciones especiales o excepciones.</li>
+</ul>
+
+<h3>11.3.3 Definición de roles y accesos</h3>
+<ul>
+    <li>Definición clara de los roles IAM utilizados.</li>
+    <li>Mapeo entre roles IAM y equipos (Network Services, IT Ops, NetFactory).</li>
+    <li>Validación de permisos mínimos necesarios.</li>
+</ul>
+
+<p>
+<strong>Nota:</strong> La nomenclatura final y estructura de los roles debe ser validada por el equipo de Public Cloud (AWS).
+</p>
+
+<h3>11.3.4 Entrega de información de monitoreo</h3>
+<ul>
+    <li>Detalle del monitoreo existente para Route 53.</li>
+    <li>Componentes relevantes de la plataforma AWS.</li>
+    <li>Descripción de métricas disponibles.</li>
+    <li>Umbrales configurados (si existen).</li>
+    <li>Mecanismos actuales de alertamiento.</li>
+</ul>
+
+<h3>11.3.5 Procesos operativos existentes</h3>
+<ul>
+    <li>Procedimientos actuales de operación.</li>
+    <li>Flujos de atención ante incidentes.</li>
+    <li>Procedimientos de recuperación conocidos.</li>
+    <li>Restricciones operativas existentes.</li>
+</ul>
+
+<h2>11.4 Habilitación de Network Services e IT Ops</h2>
+<p>Una vez entregados los elementos anteriores:</p>
+<ul>
+    <li>Network Platform – Network Services valida la información técnica.</li>
+    <li>IT Ops – Network Services valida la capacidad operativa.</li>
+    <li>Se realizan pruebas controladas de operación.</li>
+    <li>Se documentan observaciones y ajustes necesarios.</li>
+</ul>
+
+<h2>11.5 Criterios de aceptación de la transición</h2>
+<p>La transición se considera exitosa cuando:</p>
+<ul>
+    <li>Todos los entregables han sido recibidos y validados.</li>
+    <li>Los accesos están habilitados y verificados.</li>
+    <li>Las operaciones básicas pueden ejecutarse sin apoyo de Public Cloud.</li>
+    <li>Se cuenta con evidencia documental suficiente.</li>
+    <li>Los equipos confirman su preparación operativa.</li>
+</ul>
+
+<h2>11.6 Responsabilidades durante la transición</h2>
+<table>
+    <tr>
+        <th>Rol</th>
+        <th>Responsabilidad</th>
+    </tr>
+    <tr>
+        <td>Public Cloud (AWS)</td>
+        <td>Entrega técnica, documentación y habilitación inicial.</td>
+    </tr>
+    <tr>
+        <td>Network Platform – Network Services</td>
+        <td>Validación técnica y gobierno.</td>
+    </tr>
+    <tr>
+        <td>IT Ops – Network Services</td>
+        <td>Validación operativa.</td>
+    </tr>
+    <tr>
+        <td>Network Platform – NetFactory</td>
+        <td>Soporte técnico y automatización.</td>
+    </tr>
+    <tr>
+        <td>CISO</td>
+        <td>Validación de cumplimiento y riesgos.</td>
+    </tr>
+</table>
+
+<h2>11.7 Cierre de la transición</h2>
+<p>
+La transición se considera finalizada cuando:
+</p>
+<ul>
+    <li>Todas las áreas involucradas validan formalmente la operación.</li>
+    <li>Se documenta el cierre en los sistemas correspondientes.</li>
+    <li>Se transfiere oficialmente la responsabilidad operativa.</li>
+</ul>
+
+<div class="footer">
+Documento oficial – Uso interno
+</div>
+
+</body>
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>10. Aprobaciones y Responsables</title>
+<style>
+    body {
+        font-family: "Segoe UI", Arial, sans-serif;
+        margin: 60px;
+        color: #1f2933;
+        line-height: 1.6;
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 28px;
+        border-bottom: 3px solid #1f4fd8;
+        padding-bottom: 12px;
+        margin-bottom: 40px;
+    }
+
+    h2 {
+        font-size: 20px;
+        margin-top: 35px;
+        color: #1f4fd8;
+    }
+
+    h3 {
+        font-size: 16px;
+        margin-top: 25px;
+        color: #1f4fd8;
+    }
+
+    p {
+        font-size: 14px;
+        margin: 12px 0;
+        text-align: justify;
+    }
+
+    ul {
+        margin-left: 25px;
+    }
+
+    li {
+        margin: 8px 0;
+        font-size: 14px;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 15px;
+    }
+
+    th, td {
+        border: 1px solid #ccc;
+        padding: 8px;
+        text-align: left;
+        font-size: 14px;
+    }
+
+    th {
+        background-color: #f0f3f7;
+    }
+
+    .footer {
+        margin-top: 60px;
+        font-size: 12px;
+        color: #666;
+        border-top: 1px solid #ccc;
+        padding-top: 10px;
+        text-align: center;
+    }
+</style>
+</head>
+<body>
+
+<h1>10. Aprobaciones y Responsables</h1>
+
+<h2>10.1 Objetivo</h2>
+<p>
+Definir claramente los niveles de aprobación, responsabilidad y autoridad asociados a la operación del servicio DNS, garantizando que las decisiones se tomen de forma controlada, trazable y alineada con el modelo de gobierno establecido.
+</p>
+
+<h2>10.2 Principios generales</h2>
+<p>Las aprobaciones relacionadas con el servicio DNS se rigen por los siguientes principios:</p>
+<ul>
+    <li>Separación de funciones: quien ejecuta no debe aprobar su propio trabajo.</li>
+    <li>Trazabilidad: toda aprobación debe quedar registrada.</li>
+    <li>Proporcionalidad: el nivel de aprobación debe corresponder al impacto del cambio o acción.</li>
+    <li>Responsabilidad clara: cada decisión tiene un dueño definido.</li>
+    <li>Gobierno centralizado: las decisiones críticas siguen un modelo formal de aprobación.</li>
+</ul>
+
+<h2>10.3 Niveles de aprobación</h2>
+
+<h3>Nivel 1 – Operativo</h3>
+<ul>
+    <li>Aplica a actividades rutinarias y de bajo riesgo.</li>
+    <li>Incluye solicitudes estándar y cambios operativos.</li>
+</ul>
+<p><strong>Autoridad de aprobación:</strong></p>
+<ul>
+    <li>Network Platform – Network Services</li>
+</ul>
+
+<h3>Nivel 2 – Técnico / Arquitectura</h3>
+<ul>
+    <li>Aplica a cambios con impacto técnico relevante.</li>
+    <li>Incluye modificaciones de arquitectura o comportamiento del servicio.</li>
+</ul>
+<p><strong>Autoridad de aprobación:</strong></p>
+<ul>
+    <li>Network Platform – Network Services</li>
+    <li>CISO (cuando exista impacto en seguridad)</li>
+</ul>
+
+<h3>Nivel 3 – Riesgo / Seguridad</h3>
+<ul>
+    <li>Aplica a cambios con impacto alto o riesgo significativo.</li>
+    <li>Incluye excepciones de seguridad y desviaciones de control.</li>
+</ul>
+<p><strong>Autoridad de aprobación:</strong></p>
+<ul>
+    <li>CISO</li>
+</ul>
+
+<h2>10.4 Matriz de aprobación por tipo de actividad</h2>
+<table>
+    <tr>
+        <th>Actividad</th>
+        <th>Aprobador Primario</th>
+        <th>Aprobador Secundario</th>
+    </tr>
+    <tr>
+        <td>Cambios estándar</td>
+        <td>Network Platform – Network Services</td>
+        <td>—</td>
+    </tr>
+    <tr>
+        <td>Cambios complejos / arquitectura</td>
+        <td>Network Platform – Network Services</td>
+        <td>CISO</td>
+    </tr>
+    <tr>
+        <td>Automatización – diseño y desarrollo</td>
+        <td>Network Platform – Network Services</td>
+        <td>—</td>
+    </tr>
+    <tr>
+        <td>Automatización – ejecución operativa</td>
+        <td>Network Platform – Network Services</td>
+        <td>—</td>
+    </tr>
+    <tr>
+        <td>Gestión de incidentes</td>
+        <td>Incident Management</td>
+        <td>CISO (si aplica)</td>
+    </tr>
+    <tr>
+        <td>Gestión de seguridad</td>
+        <td>CISO</td>
+        <td>—</td>
+    </tr>
+    <tr>
+        <td>Excepciones de seguridad</td>
+        <td>CISO</td>
+        <td>—</td>
+    </tr>
+    <tr>
+        <td>Auditorías (respuesta y remediación)</td>
+        <td>Network Platform – Network Services</td>
+        <td>CISO</td>
+    </tr>
+</table>
+
+<h2>10.5 Mecanismo de aprobación</h2>
+<ul>
+    <li>Las aprobaciones deben registrarse mediante ServiceNow o correo electrónico institucional, según aplique.</li>
+    <li>Toda aprobación debe:
+        <ul>
+            <li>Identificar claramente al aprobador.</li>
+            <li>Estar asociada a una solicitud o evento específico.</li>
+            <li>Ser verificable para fines de auditoría.</li>
+        </ul>
+    </li>
+    <li>En caso de indisponibilidad temporal de ServiceNow, el correo institucional será el medio alternativo válido.</li>
+</ul>
+
+<div class="footer">
+Documento oficial – Uso interno
+</div>
+
+</body>
+</html>

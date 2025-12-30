@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>4. Stakeholders</title>
+<style>
+    body {
+        font-family: "Segoe UI", Arial, sans-serif;
+        margin: 60px;
+        color: #1f2933;
+        line-height: 1.6;
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 28px;
+        border-bottom: 3px solid #1f4fd8;
+        padding-bottom: 12px;
+        margin-bottom: 40px;
+    }
+
+    h2 {
+        font-size: 20px;
+        margin-top: 35px;
+        color: #1f4fd8;
+    }
+
+    h3 {
+        font-size: 16px;
+        margin-top: 25px;
+        color: #1f4fd8;
+    }
+
+    p {
+        font-size: 14px;
+        margin: 12px 0;
+        text-align: justify;
+    }
+
+    ul {
+        margin-left: 25px;
+    }
+
+    li {
+        margin: 8px 0;
+        font-size: 14px;
+    }
+
+    .footer {
+        margin-top: 60px;
+        font-size: 12px;
+        color: #666;
+        border-top: 1px solid #ccc;
+        padding-top: 10px;
+        text-align: center;
+    }
+</style>
+</head>
+<body>
+
+<h1>4. Stakeholders</h1>
+
+<h2>4.1 Objetivo de la sección</h2>
+<p>
+Definir los actores involucrados en la provisión, operación, gobierno y seguridad del servicio de DNS, así como sus responsabilidades y límites de actuación, con el fin de asegurar una operación controlada, trazable y alineada con los objetivos del negocio.
+</p>
+
+<h2>4.2 Actores involucrados</h2>
+<p>El servicio de DNS involucra a los siguientes equipos y roles:</p>
+<ul>
+    <li>Public Cloud (AWS)</li>
+    <li>Network Services</li>
+    <li>IT Ops – Network Services</li>
+    <li>Network Platform – Network Services</li>
+    <li>Network Platform – NetFactory</li>
+    <li>CISO / Seguridad de la Información</li>
+    <li>Áreas consumidoras del servicio (aplicaciones, plataformas, etc.)</li>
+</ul>
+
+<h2>4.3 Descripción de roles y responsabilidades</h2>
+
+<h3>4.3.1 Public Cloud (AWS)</h3>
+<p><strong>Rol:</strong> Proveedor y responsable de la plataforma DNS.</p>
+<p><strong>Responsabilidades principales:</strong></p>
+<ul>
+    <li>Creación y eliminación de Hosted Zones.</li>
+    <li>Asociación de Hosted Zones a VPCs.</li>
+    <li>Definición y aplicación de políticas de enrutamiento.</li>
+    <li>Administración de la plataforma AWS subyacente.</li>
+    <li>Garantizar la disponibilidad del servicio DNS desde la perspectiva del proveedor.</li>
+    <li>Proveer visibilidad, auditoría y controles de acceso (IAM, CloudTrail, etc.).</li>
+</ul>
+<p><strong>Fuera de alcance:</strong></p>
+<ul>
+    <li>Operación diaria de registros DNS.</li>
+    <li>Gestión de incidentes operativos.</li>
+    <li>Definición de arquitectura funcional del servicio.</li>
+</ul>
+
+<h3>4.3.2 IT Ops – Network Services</h3>
+<p><strong>Rol:</strong> Operación diaria del servicio DNS.</p>
+<p><strong>Responsabilidades principales:</strong></p>
+<ul>
+    <li>Gestión operativa de registros DNS.</li>
+    <li>Atención y resolución de incidentes relacionados con DNS.</li>
+    <li>Ejecución de cambios estándar aprobados.</li>
+    <li>Validación post-cambio y monitoreo básico.</li>
+    <li>Escalamiento oportuno a Network Platform o Public Cloud cuando aplique.</li>
+</ul>
+<p><strong>Fuera de alcance:</strong></p>
+<ul>
+    <li>Diseño de arquitectura DNS.</li>
+    <li>Implementación de automatizaciones.</li>
+    <li>Definición de políticas de enrutamiento.</li>
+</ul>
+
+<h3>4.3.3 Network Platform – Network Services</h3>
+<p><strong>Rol:</strong> Arquitectura y gobierno técnico del servicio DNS.</p>
+<p><strong>Responsabilidades principales:</strong></p>
+<ul>
+    <li>Diseño de la arquitectura DNS.</li>
+    <li>Definición de estándares técnicos y mejores prácticas.</li>
+    <li>Aprobación técnica de cambios complejos.</li>
+    <li>Soporte de segundo nivel.</li>
+    <li>Validación de impacto técnico y escalabilidad.</li>
+</ul>
+<p><strong>Fuera de alcance:</strong></p>
+<ul>
+    <li>Operación diaria del servicio.</li>
+    <li>Ejecución directa de cambios operativos.</li>
+</ul>
+
+<h3>4.3.4 Network Platform – NetFactory</h3>
+<p><strong>Rol:</strong> Automatización y habilitación técnica.</p>
+<p><strong>Responsabilidades principales:</strong></p>
+<ul>
+    <li>Desarrollo de automatizaciones e infraestructura como código (IaC).</li>
+    <li>Integración de DNS con pipelines CI/CD.</li>
+    <li>Despliegue controlado de cambios automatizados.</li>
+    <li>Mantenimiento de herramientas de automatización.</li>
+</ul>
+<p><strong>Fuera de alcance:</strong></p>
+<ul>
+    <li>Operación diaria del servicio.</li>
+    <li>Definición de arquitectura DNS.</li>
+    <li>Gestión directa de incidentes.</li>
+</ul>
+
+<h3>4.3.5 CISO / Seguridad de la Información</h3>
+<p><strong>Rol:</strong> Gobierno de seguridad y gestión de riesgos.</p>
+<p><strong>Responsabilidades principales:</strong></p>
+<ul>
+    <li>Definición de políticas de seguridad aplicables al servicio DNS.</li>
+    <li>Aprobación de cambios de alto impacto o riesgo.</li>
+    <li>Supervisión del cumplimiento normativo.</li>
+    <li>Gestión de riesgos y excepciones.</li>
+</ul>
+<p><strong>Fuera de alcance:</strong></p>
+<ul>
+    <li>Operación técnica del servicio.</li>
+    <li>Implementación directa de cambios.</li>
+</ul>
+
+<h2>4.4 Relación entre los roles</h2>
+<p>
+El modelo se basa en una separación clara de responsabilidades:
+</p>
+<ul>
+    <li>Public Cloud (AWS) provee la plataforma.</li>
+    <li>Network Platform – Network Services define cómo debe operar el servicio.</li>
+    <li>IT Ops – Network Services ejecuta la operación diaria.</li>
+    <li>Network Platform – NetFactory automatiza y estandariza.</li>
+    <li>CISO gobierna y valida el riesgo.</li>
+</ul>
+
+<p>
+Este enfoque permite escalabilidad, control y continuidad operativa.
+</p>
+
+<h2>4.5 Principios de colaboración</h2>
+<ul>
+    <li>Todas las actividades deben ser trazables y auditables.</li>
+    <li>Ningún equipo opera fuera de su ámbito definido.</li>
+    <li>Los cambios deben seguir procesos formales.</li>
+    <li>La comunicación entre equipos es obligatoria ante eventos de impacto.</li>
+</ul>
+
+<div class="footer">
+Documento oficial – Uso interno
+</div>
+
+</body>
+</html>

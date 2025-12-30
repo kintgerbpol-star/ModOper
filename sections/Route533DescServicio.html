@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>3. Descripción del Servicio</title>
+<style>
+    body {
+        font-family: "Segoe UI", Arial, sans-serif;
+        margin: 60px;
+        color: #1f2933;
+        line-height: 1.6;
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 28px;
+        border-bottom: 3px solid #1f4fd8;
+        padding-bottom: 12px;
+        margin-bottom: 40px;
+    }
+
+    h2 {
+        font-size: 20px;
+        margin-top: 35px;
+        color: #1f4fd8;
+    }
+
+    h3 {
+        font-size: 16px;
+        margin-top: 25px;
+        color: #1f4fd8;
+    }
+
+    p {
+        font-size: 14px;
+        margin: 12px 0;
+        text-align: justify;
+    }
+
+    ul {
+        margin-left: 25px;
+    }
+
+    li {
+        margin: 8px 0;
+        font-size: 14px;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 15px;
+    }
+
+    th, td {
+        border: 1px solid #ccc;
+        padding: 8px;
+        text-align: left;
+        font-size: 14px;
+    }
+
+    th {
+        background-color: #f0f3f7;
+    }
+
+    .footer {
+        margin-top: 60px;
+        font-size: 12px;
+        color: #666;
+        border-top: 1px solid #ccc;
+        padding-top: 10px;
+        text-align: center;
+    }
+</style>
+</head>
+<body>
+
+<h1>3. Descripción del Servicio</h1>
+
+<h2>3.1 Descripción general</h2>
+<p>
+El servicio de DNS basado en Amazon Route 53 proporciona resolución de nombres confiable, altamente disponible y escalable para aplicaciones y servicios corporativos, tanto en entornos públicos como privados.
+</p>
+
+<p>
+El servicio opera bajo un modelo de responsabilidad compartida, donde la infraestructura subyacente es gestionada por Public Cloud (AWS), mientras que la organización administra la configuración lógica, el gobierno y la operación del servicio a través de los equipos de Network Services, Network Platform – NetFactory y CISO.
+</p>
+
+<p>
+Este enfoque permite desacoplar la operación del DNS de la infraestructura física, garantizando resiliencia, escalabilidad y control operativo.
+</p>
+
+<h2>3.2 Componentes del servicio</h2>
+
+<h3>3.2.1 Hosted Zones</h3>
+<ul>
+    <li>Zonas públicas y privadas creadas y gestionadas por Public Cloud (AWS).</li>
+    <li>Representan los espacios de nombres donde se definen los registros DNS.</li>
+    <li>En el caso de zonas privadas, se asocian a VPCs específicas.</li>
+</ul>
+
+<h3>3.2.2 Registros DNS</h3>
+<p>Incluyen, entre otros:</p>
+<ul>
+    <li>A / AAAA</li>
+    <li>CNAME</li>
+    <li>TXT</li>
+    <li>MX</li>
+</ul>
+
+<p>
+La gestión operativa de los registros es responsabilidad de IT Ops – Network Services, conforme a los lineamientos definidos por Network Platform – Network Services.
+</p>
+
+<h3>3.2.3 Políticas de Enrutamiento</h3>
+<p>
+La definición y modificación de estas políticas es responsabilidad de Public Cloud (AWS), bajo gobierno y control establecidos.
+</p>
+
+<h2>3.3 Flujo de resolución DNS</h2>
+<p>El proceso de resolución DNS se desarrolla de la siguiente manera:</p>
+<ul>
+    <li>Un cliente realiza una consulta DNS.</li>
+    <li>La consulta es atendida por los servidores autoritativos de Route 53.</li>
+    <li>Route 53 evalúa los registros configurados y las políticas aplicables.</li>
+    <li>Se devuelve la respuesta correspondiente al cliente.</li>
+    <li>El cliente almacena la respuesta según el TTL configurado.</li>
+</ul>
+
+<h2>3.4 Responsabilidades por equipo</h2>
+<table>
+    <tr>
+        <th>Equipo</th>
+        <th>Responsabilidad principal</th>
+    </tr>
+    <tr>
+        <td>Public Cloud (AWS)</td>
+        <td>Gestión de Hosted Zones, asociación con VPCs y políticas de enrutamiento.</td>
+    </tr>
+    <tr>
+        <td>IT Ops – Network Services</td>
+        <td>Operación diaria, gestión de registros y atención de incidentes.</td>
+    </tr>
+    <tr>
+        <td>Network Platform – Network Services</td>
+        <td>Diseño técnico y definición de estándares del servicio.</td>
+    </tr>
+    <tr>
+        <td>Network Platform – NetFactory</td>
+        <td>Automatización y despliegue.</td>
+    </tr>
+    <tr>
+        <td>CISO</td>
+        <td>Gobierno de seguridad y gestión de riesgos.</td>
+    </tr>
+</table>
+
+<h2>3.5 Principios operativos</h2>
+<ul>
+    <li>Separación clara de responsabilidades.</li>
+    <li>Automatización como estándar operativo.</li>
+    <li>Cambios controlados y auditables.</li>
+    <li>Alta disponibilidad por diseño.</li>
+    <li>Seguridad integrada en todo el ciclo de operación.</li>
+</ul>
+
+<h2>3.6 Consideraciones clave</h2>
+<ul>
+    <li>La resolución DNS depende de componentes distribuidos fuera del control directo de la organización.</li>
+    <li>La correcta definición de responsabilidades reduce riesgos operativos.</li>
+    <li>El modelo permite escalabilidad sin comprometer gobierno ni seguridad.</li>
+</ul>
+
+<div class="footer">
+Documento oficial – Uso interno
+</div>
+
+</body>
+</html>
