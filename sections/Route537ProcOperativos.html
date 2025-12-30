@@ -2,179 +2,360 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>7.4 Gestión de Riesgos Operativos</title>
+<title>7. Procesos Operativos</title>
+
 <style>
-    body {
-        font-family: "Segoe UI", Arial, sans-serif;
-        margin: 60px;
-        color: #1f2933;
-        line-height: 1.6;
-    }
-
-    h1 {
-        text-align: center;
-        font-size: 28px;
-        border-bottom: 3px solid #1f4fd8;
-        padding-bottom: 12px;
-        margin-bottom: 40px;
-    }
-
-    h2 {
-        font-size: 20px;
-        margin-top: 35px;
-        color: #1f4fd8;
-    }
-
-    h3 {
-        font-size: 16px;
-        margin-top: 25px;
-        color: #1f4fd8;
-    }
-
-    p {
-        font-size: 14px;
-        margin: 12px 0;
-        text-align: justify;
-    }
-
-    ul {
-        margin-left: 25px;
-    }
-
-    li {
-        margin: 8px 0;
-        font-size: 14px;
-    }
-
-    table {
-        width: 100%;
-        border-collapse: collapse;
-        margin-top: 15px;
-    }
-
-    th, td {
-        border: 1px solid #ccc;
-        padding: 8px;
-        text-align: left;
-        font-size: 14px;
-    }
-
-    th {
-        background-color: #f0f3f7;
-    }
-
-    .footer {
-        margin-top: 60px;
-        font-size: 12px;
-        color: #666;
-        border-top: 1px solid #ccc;
-        padding-top: 10px;
-        text-align: center;
-    }
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    margin: 60px;
+    color: #1f2933;
+    line-height: 1.6;
+}
+h1 {
+    text-align: center;
+    font-size: 28px;
+    border-bottom: 3px solid #1f4fd8;
+    padding-bottom: 12px;
+    margin-bottom: 40px;
+}
+h2 {
+    font-size: 22px;
+    color: #1f4fd8;
+    margin-top: 40px;
+}
+h3 {
+    font-size: 18px;
+    color: #1f4fd8;
+    margin-top: 25px;
+}
+p {
+    font-size: 14px;
+    margin: 12px 0;
+    text-align: justify;
+}
+ul {
+    margin-left: 30px;
+}
+li {
+    margin: 8px 0;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    font-size: 14px;
+}
+th, td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color: #f0f3f7;
+}
+.footer {
+    margin-top: 60px;
+    font-size: 12px;
+    color: #666;
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+    text-align: center;
+}
 </style>
 </head>
+
 <body>
 
-<h1>7.4 Gestión de Riesgos Operativos</h1>
+<h1>7. Procesos Operativos</h1>
 
-<h2>7.4.1 Objetivo</h2>
+<!-- ====================================================== -->
+<h2>7.1 Gestión de Cambios</h2>
+
+<h3>7.1.1 Objetivo</h3>
 <p>
-El objetivo de la Gestión de Riesgos Operativos es identificar, evaluar, mitigar y monitorear los riesgos asociados a la operación del servicio DNS, reduciendo la probabilidad e impacto de eventos que puedan afectar la continuidad del servicio, la seguridad o el cumplimiento normativo.
+El proceso de Gestión de Cambios tiene como objetivo asegurar que todas las modificaciones realizadas sobre el servicio DNS se ejecuten de forma controlada, trazable y segura, minimizando el riesgo de interrupciones, errores operativos o impactos negativos al negocio.
 </p>
 
-<h2>7.4.2 Alcance</h2>
-<p>La gestión de riesgos operativos aplica a:</p>
+<h3>7.1.2 Alcance</h3>
+<p>Este proceso aplica a todos los cambios relacionados con:</p>
 <ul>
-    <li>Operación diaria del servicio DNS.</li>
-    <li>Cambios operativos y técnicos.</li>
-    <li>Automatizaciones y despliegues.</li>
-    <li>Incidentes y eventos recurrentes.</li>
-    <li>Dependencias internas y externas que impacten el servicio.</li>
+<li>Registros DNS.</li>
+<li>Políticas de enrutamiento.</li>
+<li>Automatizaciones asociadas al servicio.</li>
+<li>Configuraciones que impacten el comportamiento del DNS.</li>
+</ul>
+<p>Todos los cambios deberán ser gestionados y registrados a través de la herramienta corporativa de ITSM: <strong>ServiceNow</strong>.</p>
+
+<h3>7.1.3 Clasificación de cambios</h3>
+
+<p><strong>Cambios estándar</strong></p>
+<ul>
+<li>Cambios repetitivos, de bajo riesgo y previamente aprobados.</li>
+<li>Actualización de registros DNS existentes.</li>
+<li>Cambios operativos sin impacto arquitectónico.</li>
+</ul>
+<p><strong>Responsabilidades:</strong></p>
+<ul>
+<li><strong>Responsible:</strong> IT Ops – Network Services</li>
+<li><strong>Accountable:</strong> Network Platform – Network Services</li>
 </ul>
 
-<h2>7.4.3 Tipos de riesgos considerados</h2>
-
-<h3>Riesgos operativos</h3>
+<p><strong>Cambios complejos / de arquitectura</strong></p>
 <ul>
-    <li>Errores humanos durante la operación.</li>
-    <li>Configuraciones incorrectas.</li>
-    <li>Fallas en la ejecución de cambios.</li>
-    <li>Dependencia de personal clave.</li>
+<li>Modificación de políticas de enrutamiento.</li>
+<li>Cambios estructurales en la arquitectura DNS.</li>
+<li>Introducción de nuevos patrones operativos.</li>
+</ul>
+<p><strong>Responsabilidades:</strong></p>
+<ul>
+<li><strong>Responsible:</strong> Network Platform – Network Services</li>
+<li><strong>Accountable:</strong> CISO</li>
 </ul>
 
-<h3>Riesgos técnicos</h3>
+<p><strong>Cambios automatizados</strong></p>
 <ul>
-    <li>Fallas en la resolución DNS.</li>
-    <li>Comportamiento inesperado de políticas de enrutamiento.</li>
-    <li>Errores derivados de automatizaciones.</li>
-    <li>Degradación del servicio por configuraciones incorrectas.</li>
+<li>Cambios ejecutados mediante flujos de automatización previamente aprobados.</li>
 </ul>
 
-<h3>Riesgos de seguridad</h3>
+<p><strong>Subcategorías:</strong></p>
 <ul>
-    <li>Accesos no autorizados.</li>
-    <li>Cambios no aprobados.</li>
-    <li>Exposición de información sensible.</li>
-    <li>Incumplimiento de controles de seguridad.</li>
+<li><strong>Diseño y desarrollo:</strong> Network Platform – NetFactory (Responsible) / Network Platform – Network Services (Accountable)</li>
+<li><strong>Ejecución operativa:</strong> IT Ops – Network Services (Responsible) / Network Platform – Network Services (Accountable)</li>
 </ul>
 
-<h2>7.4.4 Gestión del riesgo</h2>
-<p>La gestión del riesgo se realiza de la siguiente manera:</p>
+<h3>7.1.4 Flujo del proceso de cambio</h3>
 <ol>
-    <li><strong>Identificación del riesgo:</strong> El riesgo puede identificarse durante la operación, cambios, incidentes o revisiones periódicas.</li>
-    <li><strong>Registro del riesgo:</strong> Todo riesgo identificado debe ser registrado en el sistema corporativo de gestión de riesgos <strong>Heracles</strong>, incluyendo su descripción, impacto y probabilidad.</li>
-    <li><strong>Evaluación del impacto:</strong> Se analiza el impacto técnico, operativo y de negocio asociado al riesgo.</li>
-    <li><strong>Definición de acciones de mitigación:</strong> Se establecen acciones correctivas o preventivas para reducir el riesgo.</li>
-    <li><strong>Aprobación del riesgo:</strong>
-        <ul>
-            <li>Riesgos operativos: aprobados por Network Platform – Network Services.</li>
-            <li>Riesgos de seguridad: aprobados por el CISO.</li>
-        </ul>
-    </li>
-    <li><strong>Ejecución y seguimiento:</strong> Las acciones de mitigación se ejecutan y su efectividad es monitoreada de forma continua.</li>
+<li>Registro del cambio en ServiceNow.</li>
+<li>Clasificación del tipo de cambio.</li>
+<li>Evaluación de impacto técnico y de seguridad.</li>
+<li>Aprobación conforme al tipo de cambio.</li>
+<li>Ejecución del cambio.</li>
+<li>Validación post-cambio.</li>
+<li>Cierre y documentación en ServiceNow.</li>
 </ol>
 
-<h2>7.4.5 Roles y responsabilidades</h2>
-<table>
-    <tr>
-        <th>Rol</th>
-        <th>Responsabilidad</th>
-    </tr>
-    <tr>
-        <td>IT Ops – Network Services</td>
-        <td>Identificación temprana de riesgos operativos.</td>
-    </tr>
-    <tr>
-        <td>Network Platform – Network Services</td>
-        <td>Evaluación técnica y definición de mitigaciones.</td>
-    </tr>
-    <tr>
-        <td>Public Cloud (AWS)</td>
-        <td>Mitigación de riesgos asociados a la plataforma.</td>
-    </tr>
-    <tr>
-        <td>Network Platform – NetFactory</td>
-        <td>Implementación técnica de acciones correctivas.</td>
-    </tr>
-    <tr>
-        <td>CISO</td>
-        <td>Aprobación y gobierno de riesgos de seguridad.</td>
-    </tr>
-</table>
-
-<h2>7.4.6 Integración con otros procesos</h2>
+<h3>7.1.5 Controles y trazabilidad</h3>
 <ul>
-    <li>Gestión de Cambios, para evaluar riesgos antes de ejecutar modificaciones.</li>
-    <li>Gestión de Incidentes, para prevenir recurrencia de eventos.</li>
-    <li>Gestión de Seguridad, para control y cumplimiento normativo.</li>
-    <li>Auditoría, para seguimiento y mejora continua.</li>
+<li>Registro en ServiceNow.</li>
+<li>Evidencia de aprobación.</li>
+<li>Evidencia de ejecución y validación.</li>
+<li>Auditoría y trazabilidad completa.</li>
 </ul>
 
-<h2>7.4.7 Registro y seguimiento</h2>
+<h3>7.1.6 Gestión de riesgos asociados a cambios</h3>
 <ul>
-    <li>Todos los riesgos deben documentarse en <strong>Heracles</strong>.</li>
-    <li>Cada riesgo debe contar con un responsable, nivel de impacto y plan de tratamiento.</li>
-    <li>Los riesgos deben revisarse periódicamente y actualizarse según su evolución.</li>
+<li>Evaluación previa de riesgos.</li>
+<li>Aprobación del CISO para cambios de alto impacto.</li>
+<li>Definición de planes de reversión.</li>
+<li>Documentación del impacto al negocio.</li>
+</ul>
+
+<h3>7.1.7 Roles involucrados</h3>
+<table>
+<tr><th>Rol</th><th>Participación</th></tr>
+<tr><td>Public Cloud (AWS)</td><td>Consultado cuando el cambio impacta la plataforma</td></tr>
+<tr><td>IT Ops – Network Services</td><td>Ejecución y validación operativa</td></tr>
+<tr><td>Network Platform – Network Services</td><td>Gobierno técnico y aprobación</td></tr>
+<tr><td>Network Platform – NetFactory</td><td>Automatización y soporte técnico</td></tr>
+<tr><td>CISO</td><td>Aprobación de cambios de alto riesgo</td></tr>
+</table>
+
+<!-- ====================================================== -->
+<h2>7.2 Gestión de Incidentes</h2>
+
+<h3>7.2.1 Objetivo</h3>
+<p>
+El proceso de Gestión de Incidentes tiene como objetivo restablecer la operación normal del servicio DNS lo antes posible, minimizando el impacto al negocio y asegurando una comunicación clara, trazable y coordinada entre los equipos involucrados.
+</p>
+
+<p>
+Este proceso está orientado a la restauración del servicio, no a la identificación de causa raíz.
+</p>
+
+<h3>7.2.2 Alcance</h3>
+<ul>
+<li>Fallas en la resolución de nombres.</li>
+<li>Impacto en aplicaciones derivado de problemas DNS.</li>
+<li>Errores de configuración.</li>
+<li>Fallas relacionadas con automatizaciones.</li>
+<li>Incidentes derivados de cambios recientes.</li>
+</ul>
+
+<h3>7.2.3 Clasificación de incidentes</h3>
+
+<p><strong>Incidente menor</strong></p>
+<ul>
+<li>Impacto limitado o localizado.</li>
+<li>No afecta servicios críticos.</li>
+<li>Resolución mediante procedimientos estándar.</li>
+</ul>
+
+<p><strong>Incidente mayor</strong></p>
+<ul>
+<li>Impacta servicios críticos o múltiples usuarios.</li>
+<li>Requiere coordinación entre equipos.</li>
+<li>Puede involucrar a Public Cloud o CISO.</li>
+</ul>
+
+<h3>7.2.4 Flujo de gestión de incidentes</h3>
+<ol>
+<li>Detección y registro.</li>
+<li>Clasificación y priorización.</li>
+<li>Diagnóstico inicial.</li>
+<li>Escalamiento.</li>
+<li>Resolución y recuperación.</li>
+<li>Cierre documentado.</li>
+</ol>
+
+<h3>7.2.5 Roles y responsabilidades</h3>
+<table>
+<tr><th>Rol</th><th>Responsabilidad</th></tr>
+<tr><td>IT Ops – Network Services</td><td>Atención inicial y resolución</td></tr>
+<tr><td>Network Platform – Network Services</td><td>Soporte especializado</td></tr>
+<tr><td>Public Cloud (AWS)</td><td>Soporte cuando impacta la plataforma</td></tr>
+<tr><td>Network Platform – NetFactory</td><td>Apoyo técnico</td></tr>
+<tr><td>CISO</td><td>Gestión de incidentes de seguridad</td></tr>
+</table>
+
+<h3>7.2.6 Comunicación y escalamiento</h3>
+<ul>
+<li>Comunicación centralizada vía ServiceNow.</li>
+<li>Escalamiento según criticidad.</li>
+<li>Documentación obligatoria.</li>
+</ul>
+
+<h3>7.2.7 Seguimiento y mejora</h3>
+<ul>
+<li>Análisis de causas recurrentes.</li>
+<li>Definición de acciones preventivas.</li>
+<li>Revisión periódica.</li>
+</ul>
+
+<!-- ====================================================== -->
+<h2>7.3 Gestión de Solicitudes</h2>
+
+<h3>7.3.1 Objetivo</h3>
+<p>
+Atender solicitudes relacionadas con el servicio DNS de forma controlada, trazable y eficiente, sin representar un incidente ni un cambio complejo.
+</p>
+
+<h3>7.3.2 Alcance</h3>
+<ul>
+<li>Creación o modificación de registros DNS estándar.</li>
+<li>Solicitudes de información.</li>
+<li>Validaciones operativas básicas.</li>
+</ul>
+
+<h3>7.3.3 Tipos de solicitudes</h3>
+
+<p><strong>Solicitudes estándar</strong></p>
+<ul>
+<li>Altas, bajas o modificaciones simples.</li>
+<li>Consultas sobre configuraciones.</li>
+<li>Verificación de resolución DNS.</li>
+</ul>
+
+<p><strong>Solicitudes especiales</strong></p>
+<ul>
+<li>Solicitudes con impacto potencial.</li>
+<li>Requieren validación técnica previa.</li>
+</ul>
+
+<h3>7.3.4 Flujo de atención</h3>
+<ol>
+<li>Registro en ServiceNow.</li>
+<li>Clasificación y validación.</li>
+<li>Asignación al equipo correspondiente.</li>
+<li>Ejecución.</li>
+<li>Validación y cierre.</li>
+</ol>
+
+<h3>7.3.5 Roles y responsabilidades</h3>
+<table>
+<tr><th>Rol</th><th>Responsabilidad</th></tr>
+<tr><td>IT Ops – Network Services</td><td>Ejecución de solicitudes estándar</td></tr>
+<tr><td>Network Platform – Network Services</td><td>Validación técnica</td></tr>
+<tr><td>Network Platform – NetFactory</td><td>Soporte de automatización</td></tr>
+<tr><td>Public Cloud (AWS)</td><td>Consulta cuando impacta la plataforma</td></tr>
+<tr><td>CISO</td><td>Consulta en temas de seguridad</td></tr>
+</table>
+
+<h3>7.3.6 Controles y trazabilidad</h3>
+<ul>
+<li>Registro obligatorio en ServiceNow.</li>
+<li>Evidencia de aprobación.</li>
+<li>Auditoría y trazabilidad completa.</li>
+</ul>
+
+<!-- ====================================================== -->
+<h2>7.4 Gestión de Riesgos Operativos</h2>
+
+<h3>7.4.1 Objetivo</h3>
+<p>Identificar, evaluar, mitigar y monitorear los riesgos asociados a la operación del servicio DNS.</p>
+
+<h3>7.4.2 Alcance</h3>
+<ul>
+<li>Operación diaria del servicio DNS.</li>
+<li>Cambios operativos y técnicos.</li>
+<li>Automatizaciones y despliegues.</li>
+<li>Incidentes y eventos recurrentes.</li>
+</ul>
+
+<h3>7.4.3 Tipos de riesgos considerados</h3>
+<p><strong>Riesgos operativos</strong></p>
+<ul>
+<li>Errores humanos.</li>
+<li>Configuraciones incorrectas.</li>
+<li>Fallas en ejecución de cambios.</li>
+</ul>
+
+<p><strong>Riesgos técnicos</strong></p>
+<ul>
+<li>Fallas en resolución DNS.</li>
+<li>Errores derivados de automatizaciones.</li>
+<li>Degradación del servicio.</li>
+</ul>
+
+<p><strong>Riesgos de seguridad</strong></p>
+<ul>
+<li>Accesos no autorizados.</li>
+<li>Cambios no aprobados.</li>
+<li>Exposición de información sensible.</li>
+</ul>
+
+<h3>7.4.4 Gestión del riesgo</h3>
+<ol>
+<li>Identificación del riesgo.</li>
+<li>Registro en el sistema Heracles.</li>
+<li>Evaluación del impacto.</li>
+<li>Definición de acciones de mitigación.</li>
+<li>Aprobación del riesgo.</li>
+<li>Ejecución y seguimiento.</li>
+</ol>
+
+<h3>7.4.5 Roles y responsabilidades</h3>
+<table>
+<tr><th>Rol</th><th>Responsabilidad</th></tr>
+<tr><td>IT Ops – Network Services</td><td>Identificación temprana de riesgos</td></tr>
+<tr><td>Network Platform – Network Services</td><td>Evaluación técnica y mitigación</td></tr>
+<tr><td>Public Cloud (AWS)</td><td>Mitigación de riesgos de plataforma</td></tr>
+<tr><td>Network Platform – NetFactory</td><td>Implementación de acciones</td></tr>
+<tr><td>CISO</td><td>Aprobación y gobierno de riesgos</td></tr>
+</table>
+
+<h3>7.4.6 Integración con otros procesos</h3>
+<ul>
+<li>Gestión de Cambios</li>
+<li>Gestión de Incidentes</li>
+<li>Gestión de Seguridad</li>
+<li>Auditoría</li>
+</ul>
+
+<h3>7.4.7 Registro y seguimiento</h3>
+<ul>
+<li>Todos los riesgos deben documentarse en Heracles.</li>
+<li>Cada riesgo debe contar con responsable y plan de tratamiento.</li>
+<li>Revisión periódica y actualización continua.</li>
 </ul>
 
 <div class="footer">
