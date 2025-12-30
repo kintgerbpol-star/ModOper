@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>IPAM - Monitoreo y Métricas</title>
+</head>
+<body>
+
+<h1>IPAM – Monitoreo y Métricas</h1>
+
+<p>
+La función de monitoreo del servicio de <strong>IP Address Management (IPAM)</strong> tiene como objetivo asegurar la
+visibilidad operativa, la trazabilidad de acciones y la detección oportuna de desviaciones, sin duplicar los controles
+definidos en políticas organizacionales de mayor nivel.
+</p>
+
+<p>
+El enfoque de esta sección se centra en la observabilidad del uso del servicio, su estabilidad y la capacidad de auditoría.
+</p>
+
+<h2>9.1 Objetivos del monitoreo</h2>
+
+<p>El monitoreo del servicio IPAM busca:</p>
+
+<ul>
+  <li>Garantizar la trazabilidad de las acciones realizadas dentro de la plataforma.</li>
+  <li>Detectar comportamientos anómalos o no esperados.</li>
+  <li>Facilitar auditorías internas y externas.</li>
+  <li>Proveer información objetiva para la mejora continua del servicio.</li>
+  <li>Asegurar la disponibilidad operativa del servicio IPAM.</li>
+</ul>
+
+<h2>9.2 Alcance del monitoreo</h2>
+
+<p>El monitoreo cubre, como mínimo, los siguientes componentes:</p>
+
+<h3>Actividad de usuarios</h3>
+<ul>
+  <li>Creación, modificación y eliminación de objetos.</li>
+  <li>Cambios en atributos relevantes.</li>
+  <li>Accesos exitosos y fallidos.</li>
+  <li>Uso de cuentas técnicas y automatizaciones.</li>
+</ul>
+
+<h3>Eventos operativos</h3>
+<ul>
+  <li>Cambios en la estructura del direccionamiento.</li>
+  <li>Ejecución de automatizaciones.</li>
+  <li>Errores operativos relevantes.</li>
+  <li>Fallas en integraciones con sistemas externos.</li>
+</ul>
+
+<h3>Salud del servicio</h3>
+<ul>
+  <li>Disponibilidad de la plataforma IPAM.</li>
+  <li>Comportamientos anómalos o degradación del servicio.</li>
+  <li>Eventos que puedan afectar la continuidad operativa.</li>
+</ul>
+
+<h2>9.3 Trazabilidad y auditoría</h2>
+
+<p>
+La plataforma IPAM debe permitir:
+</p>
+
+<ul>
+  <li>Registro detallado de acciones realizadas por usuarios y cuentas técnicas.</li>
+  <li>Asociación de cada acción con un identificador único (usuario, rol o cuenta de servicio).</li>
+  <li>Conservación de logs conforme a las políticas de retención definidas por la organización.</li>
+  <li>Capacidad de consulta para procesos de auditoría y análisis forense.</li>
+</ul>
+
+<p>
+Los registros deben permitir reconstruir:
+</p>
+
+<ul>
+  <li>Quién realizó una acción.</li>
+  <li>Qué acción fue ejecutada.</li>
+  <li>Cuándo ocurrió.</li>
+  <li>Sobre qué objeto se ejecutó.</li>
+</ul>
+
+<h2>9.4 Indicadores y métricas</h2>
+
+<p>
+Sin establecer métricas rígidas, se recomienda contar con indicadores que permitan evaluar el comportamiento general del servicio.
+</p>
+
+<h3>Métricas operativas</h3>
+<ul>
+  <li>Número de cambios realizados en IPAM.</li>
+  <li>Número de solicitudes atendidas.</li>
+  <li>Tiempo promedio de atención por tipo de solicitud.</li>
+  <li>Volumen de automatizaciones ejecutadas.</li>
+</ul>
+
+<h3>Métricas de estabilidad</h3>
+<ul>
+  <li>Incidentes relacionados con IPAM.</li>
+  <li>Disponibilidad del servicio.</li>
+  <li>Número de errores operativos detectados.</li>
+</ul>
+
+<h3>Métricas de control</h3>
+<ul>
+  <li>Cantidad de accesos administrativos.</li>
+  <li>Uso de cuentas de automatización.</li>
+  <li>Eventos relevantes detectados durante auditorías.</li>
+</ul>
+
+<h2>9.5 Integración con herramientas corporativas</h2>
+
+<p>
+Cuando aplique, el monitoreo del servicio IPAM puede integrarse con herramientas corporativas de observabilidad,
+tales como plataformas de monitoreo centralizado, sistemas de gestión de eventos o soluciones de análisis de logs.
+</p>
+
+<p>
+Estas integraciones permiten ampliar la visibilidad operativa y fortalecer los controles de seguridad.
+</p>
+
+<h2>9.6 Consideraciones finales</h2>
+
+<ul>
+  <li>El monitoreo debe enfocarse en la detección temprana y la mejora continua.</li>
+  <li>La información recolectada debe utilizarse con fines operativos y de mejora, no punitivos.</li>
+  <li>Cualquier hallazgo relevante debe documentarse y, cuando aplique, escalarse conforme a los procesos definidos.</li>
+</ul>
+
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>IPAM - Matriz RACI</title>
+</head>
+<body>
+
+<h1>IPAM – Matriz RACI</h1>
+
+<p>
+La matriz RACI define de forma clara las responsabilidades de cada rol involucrado en el servicio de
+<strong>IP Address Management (IPAM)</strong>, estableciendo quién es Responsable (R), Aprobador (A),
+Consultado (C), Informado (I) o no participa (–) en cada actividad.
+</p>
+
+<h2>6.1 Definición de roles RACI</h2>
+
+<ul>
+  <li><strong>R – Responsible:</strong> Ejecuta la actividad.</li>
+  <li><strong>A – Accountable:</strong> Tiene la responsabilidad final sobre la actividad.</li>
+  <li><strong>C – Consulted:</strong> Proporciona información o validaciones necesarias.</li>
+  <li><strong>I – Informed:</strong> Es notificado sobre el resultado o avance.</li>
+  <li><strong>–:</strong> No participa en la actividad.</li>
+</ul>
+
+<h2>6.2 Roles considerados</h2>
+
+<table border="1" cellpadding="6" cellspacing="0">
+  <tr>
+    <th>Rol</th>
+    <th>Descripción</th>
+  </tr>
+  <tr>
+    <td>Network Platform – Network Services</td>
+    <td>Responsable de la operación de IPAM, validaciones y accountability sobre automatizaciones.</td>
+  </tr>
+  <tr>
+    <td>Network Platform – Arquitectura</td>
+    <td>Define lineamientos, estructura de información y autoriza nuevos atributos.</td>
+  </tr>
+  <tr>
+    <td>Network Platform – NetFactory</td>
+    <td>Ejecuta desarrollos y automatizaciones exclusivamente cuando aplica.</td>
+  </tr>
+  <tr>
+    <td>Dueños de Segmento</td>
+    <td>Responsables de la información asociada a sus segmentos.</td>
+  </tr>
+  <tr>
+    <td>CISO</td>
+    <td>Supervisa el cumplimiento de controles y políticas de seguridad.</td>
+  </tr>
+</table>
+
+<h2>6.3 Matriz RACI por actividad</h2>
+
+<table border="1" cellpadding="6" cellspacing="0">
+  <tr>
+    <th>Actividad</th>
+    <th>Network Platform – Network Services</th>
+    <th>Network Platform – Arquitectura</th>
+    <th>Network Platform – NetFactory</th>
+    <th>Dueños de Segmento</th>
+    <th>CISO</th>
+  </tr>
+  <tr>
+    <td>Definición de estructura base de IPAM</td>
+    <td>R</td>
+    <td>A</td>
+    <td>–</td>
+    <td>I</td>
+    <td>I</td>
+  </tr>
+  <tr>
+    <td>Creación de nuevos atributos</td>
+    <td>R</td>
+    <td>A</td>
+    <td>–</td>
+    <td>I</td>
+    <td>I</td>
+  </tr>
+  <tr>
+    <td>Mantenimiento de atributos existentes</td>
+    <td>R</td>
+    <td>C</td>
+    <td>–</td>
+    <td>I</td>
+    <td>I</td>
+  </tr>
+  <tr>
+    <td>Registro de información de segmentos</td>
+    <td>I</td>
+    <td>I</td>
+    <td>–</td>
+    <td>R</td>
+    <td>I</td>
+  </tr>
+  <tr>
+    <td>Validación de información de segmentos</td>
+    <td>A</td>
+    <td>C</td>
+    <td>–</td>
+    <td>R</td>
+    <td>I</td>
+  </tr>
+  <tr>
+    <td>Automatización de procesos</td>
+    <td>A</td>
+    <td>C</td>
+    <td>R</td>
+    <td>–</td>
+    <td>I</td>
+  </tr>
+  <tr>
+    <td>Gestión de accesos a IPAM</td>
+    <td>R</td>
+    <td>C</td>
+    <td>–</td>
+    <td>I</td>
+    <td>C</td>
+  </tr>
+  <tr>
+    <td>Revisión de cumplimiento de seguridad</td>
+    <td>C</td>
+    <td>I</td>
+    <td>–</td>
+    <td>I</td>
+    <td>R</td>
+  </tr>
+  <tr>
+    <td>Atención a auditorías</td>
+    <td>C</td>
+    <td>C</td>
+    <td>–</td>
+    <td>I</td>
+    <td>R</td>
+  </tr>
+  <tr>
+    <td>Gestión de incidentes relacionados con IPAM</td>
+    <td>R</td>
+    <td>C</td>
+    <td>–</td>
+    <td>I</td>
+    <td>C</td>
+  </tr>
+</table>
+
+<h2>6.4 Consideraciones operativas</h2>
+
+<ul>
+  <li>Network Platform – Network Services es responsable y accountable de las automatizaciones y de la validación de la información.</li>
+  <li>NetFactory participa únicamente en actividades relacionadas con automatización.</li>
+  <li>Los dueños de segmento son responsables de la calidad y actualización de la información bajo su control.</li>
+  <li>Cualquier modificación estructural debe alinearse previamente con Network Platform – Arquitectura.</li>
+</ul>
+
+</body>
+</html>

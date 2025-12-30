@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>IPAM - Gestión de Seguridad y Accesos</title>
+</head>
+<body>
+
+<h1>IPAM – Gestión de Seguridad y Accesos</h1>
+
+<p>
+La gestión de seguridad y accesos del servicio de <strong>IP Address Management (IPAM)</strong> se basa en los mecanismos
+nativos de control de acceso de <strong>Infoblox</strong>, garantizando segregación de funciones, trazabilidad y
+cumplimiento de las políticas de seguridad de la organización.
+</p>
+
+<h2>8.1 Principios de control de acceso</h2>
+
+<ul>
+  <li>Mínimo privilegio.</li>
+  <li>Segregación de funciones.</li>
+  <li>Trazabilidad.</li>
+  <li>Responsabilidad individual.</li>
+  <li>Control centralizado.</li>
+</ul>
+
+<h2>8.2 Modelo de permisos en Infoblox</h2>
+
+<p>
+Infoblox utiliza una combinación de Admin Groups, Roles, permisos por objeto y scopes
+(Network Views, Networks, IP Ranges y Extensible Attributes).
+</p>
+
+<h2>8.3 Definición de perfiles por área</h2>
+
+<h3>8.3.1 Network Platform – Network Services</h3>
+
+<p><strong>Rol:</strong> Super Admin / Full Admin (controlado)</p>
+
+<ul>
+  <li>Administración total de la plataforma.</li>
+  <li>Gestión de estructura, permisos y automatizaciones.</li>
+  <li>Validación final de información.</li>
+</ul>
+
+<h3>8.3.2 Network Platform – Arquitectura</h3>
+
+<p><strong>Rol:</strong> Read-Only / Auditor</p>
+
+<ul>
+  <li>Acceso de solo lectura a toda la plataforma.</li>
+  <li>Validación conceptual y estructural.</li>
+  <li>Sin capacidad de modificación.</li>
+</ul>
+
+<h3>8.3.3 Network Platform – NetFactory</h3>
+
+<p><strong>Rol:</strong> Automation Service Account</p>
+
+<ul>
+  <li>Acceso vía API para automatizaciones autorizadas.</li>
+  <li>Sin acceso a la interfaz gráfica.</li>
+</ul>
+
+<h3>8.3.4 Dueños de Segmento</h3>
+
+<p><strong>Rol:</strong> Segment Owner</p>
+
+<ul>
+  <li>Edición controlada de información operativa.</li>
+  <li>Acceso limitado a sus propios segmentos.</li>
+</ul>
+
+<h3>8.3.5 CISO</h3>
+
+<p><strong>Rol:</strong> Security Auditor</p>
+
+<ul>
+  <li>Acceso de solo lectura.</li>
+  <li>Revisión de logs, permisos y controles.</li>
+</ul>
+
+<h2>8.4 Resumen de permisos por rol</h2>
+
+<table border="1" cellpadding="6" cellspacing="0">
+  <tr>
+    <th>Rol</th>
+    <th>Lectura</th>
+    <th>Escritura</th>
+    <th>Administración</th>
+    <th>Automatización</th>
+  </tr>
+  <tr>
+    <td>Network Platform – Network Services</td>
+    <td>✔</td>
+    <td>✔</td>
+    <td>✔</td>
+    <td>✔</td>
+  </tr>
+  <tr>
+    <td>Network Platform – Arquitectura</td>
+    <td>✔</td>
+    <td>✖</td>
+    <td>✖</td>
+    <td>✖</td>
+  </tr>
+  <tr>
+    <td>Network Platform – NetFactory</td>
+    <td>✔</td>
+    <td>Parcial</td>
+    <td>✖</td>
+    <td>✔</td>
+  </tr>
+  <tr>
+    <td>Dueños de Segmento</td>
+    <td>✔</td>
+    <td>Parcial</td>
+    <td>✖</td>
+    <td>✖</td>
+  </tr>
+  <tr>
+    <td>CISO</td>
+    <td>✔</td>
+    <td>✖</td>
+    <td>✖</td>
+    <td>✖</td>
+  </tr>
+</table>
+
+<h2>8.5 Consideraciones de seguridad</h2>
+
+<ul>
+  <li>Todos los accesos deben estar asociados a identidades individuales o cuentas de servicio.</li>
+  <li>El acceso privilegiado debe revisarse periódicamente.</li>
+  <li>Las acciones deben ser auditables y trazables.</li>
+  <li>Cualquier excepción debe documentarse y aprobarse formalmente.</li>
+</ul>
+
+</body>
+</html>
