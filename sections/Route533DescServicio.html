@@ -118,10 +118,12 @@ La definición y modificación de estas políticas es responsabilidad de Public 
 </p>
 
 <h2>3.3 Flujo de resolución DNS</h2>
-<p>El proceso de resolución DNS se desarrolla de la siguiente manera:</p>
+<p>El proceso de resolución DNS para AWS Route 53, se desarrolla de la siguiente manera:</p>
 <ul>
     <li>Un cliente realiza una consulta DNS.</li>
-    <li>La consulta es atendida por los servidores autoritativos de Route 53.</li>
+    <li>Los servidores DNS resolutores definidos en la terminal consultan a los DNS root de la red.</li>
+    <li>Los DNS root orientan al resolutor sobre el servidor donde se encuentra la información solicitada.</li>
+    <li>Cuando la zona se encuentra en AWS Route 53, se consulta a los servidores autoritativos de Route 53.</li>
     <li>Route 53 evalúa los registros configurados y las políticas aplicables.</li>
     <li>Se devuelve la respuesta correspondiente al cliente.</li>
     <li>El cliente almacena la respuesta según el TTL configurado.</li>
