@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>SaaS Load Balancing - Procesos Operativos</title>
+
+    <style>
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            margin: 60px;
+            color: #1f2933;
+            line-height: 1.6;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 28px;
+            border-bottom: 3px solid #1f4fd8;
+            padding-bottom: 12px;
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            font-size: 20px;
+            margin-top: 35px;
+            color: #1f4fd8;
+        }
+
+        h3 {
+            font-size: 16px;
+            margin-top: 25px;
+            color: #1f4fd8;
+        }
+
+        p {
+            font-size: 14px;
+            margin: 12px 0;
+            text-align: justify;
+        }
+
+        ul {
+            margin-left: 25px;
+        }
+
+        li {
+            margin: 8px 0;
+            font-size: 14px;
+        }
+
+        .footer {
+            margin-top: 60px;
+            font-size: 12px;
+            color: #666;
+            border-top: 1px solid #ccc;
+            padding-top: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>7. Procesos Operativos</h1>
+
+<h2>7.1 Gestión de cambios</h2>
+
+<p>
+La gestión de cambios del servicio <strong>SaaS Load Balancing</strong> asegura que las modificaciones se
+realicen de forma controlada, autorizada y alineada con los objetivos del negocio.
+</p>
+
+<h3>7.1.1 Alcance</h3>
+<ul>
+    <li>Cambios en configuraciones de balanceo.</li>
+    <li>Ajustes en reglas de distribución de tráfico.</li>
+    <li>Incorporación o modificación de aplicaciones expuestas.</li>
+</ul>
+
+<h3>7.1.2 Flujo general</h3>
+<ul>
+    <li>Las solicitudes se registran en <strong>ServiceNow</strong>.</li>
+    <li>Los cambios que impliquen exposición de aplicaciones a Internet requieren autorización del <strong>CISO</strong>.</li>
+    <li><strong>IT Ops</strong> ejecuta los cambios conforme a los procedimientos definidos.</li>
+    <li>El <strong>Application Owner</strong> valida el correcto funcionamiento posterior al cambio.</li>
+</ul>
+
+<h2>7.2 Gestión de incidentes</h2>
+
+<p>
+La gestión de incidentes busca restablecer la operación normal del servicio ante eventos que afecten
+su disponibilidad o desempeño.
+</p>
+
+<h3>7.2.1 Alcance</h3>
+<ul>
+    <li>Incidentes que impacten la accesibilidad de aplicaciones expuestas.</li>
+    <li>Eventos que afecten la experiencia del usuario final.</li>
+</ul>
+
+<h3>7.2.2 Flujo general</h3>
+<ul>
+    <li>El incidente se registra en <strong>ServiceNow</strong>.</li>
+    <li>El equipo de <strong>Incident Management</strong> evalúa impacto, severidad y comunicación con el negocio.</li>
+    <li><strong>IT Ops</strong> ejecuta acciones técnicas para la recuperación del servicio.</li>
+    <li>Se coordina con el proveedor cuando es necesario.</li>
+    <li>El <strong>Application Owner</strong> valida la recuperación del servicio antes del cierre.</li>
+</ul>
+
+<h2>7.3 Gestión de solicitudes</h2>
+
+<p>
+Este proceso cubre solicitudes operativas relacionadas con el servicio de Load Balancing.
+</p>
+
+<h3>7.3.1 Alcance</h3>
+<ul>
+    <li>Solicitudes de configuración de balanceadores.</li>
+    <li>Solicitudes de ajuste de reglas de tráfico.</li>
+    <li>Solicitudes de acceso conforme al modelo de gobierno.</li>
+</ul>
+
+<h3>7.3.2 Flujo general</h3>
+<ul>
+    <li>Registro de la solicitud en <strong>ServiceNow</strong>.</li>
+    <li>Ejecución por parte de <strong>IT Ops</strong>.</li>
+    <li>Aprobación del <strong>CISO</strong> cuando aplique.</li>
+    <li>Validación final por parte del <strong>Application Owner</strong>.</li>
+</ul>
+
+<div class="footer">
+    Documento interno – Uso exclusivo de la organización
+</div>
+
+</body>
+</html>

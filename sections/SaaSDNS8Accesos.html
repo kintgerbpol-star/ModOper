@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>SaaS DNS - Gestión de Seguridad y Accesos</title>
+
+    <style>
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            margin: 60px;
+            color: #1f2933;
+            line-height: 1.6;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 28px;
+            border-bottom: 3px solid #1f4fd8;
+            padding-bottom: 12px;
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            font-size: 20px;
+            margin-top: 35px;
+            color: #1f4fd8;
+        }
+
+        h3 {
+            font-size: 16px;
+            margin-top: 25px;
+            color: #1f4fd8;
+        }
+
+        p {
+            font-size: 14px;
+            margin: 12px 0;
+            text-align: justify;
+        }
+
+        ul {
+            margin-left: 25px;
+        }
+
+        li {
+            margin: 8px 0;
+            font-size: 14px;
+        }
+
+        .footer {
+            margin-top: 60px;
+            font-size: 12px;
+            color: #666;
+            border-top: 1px solid #ccc;
+            padding-top: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>8. Gestión de seguridad y accesos</h1>
+
+<h2>8.1 Principios de seguridad</h2>
+
+<p>
+La gestión de seguridad y accesos del servicio <strong>SaaS DNS</strong> tiene como objetivo garantizar
+que el acceso a la plataforma se realice de forma controlada, segura y alineada con los principios
+de mínimo privilegio y segregación de funciones.
+</p>
+
+<p>
+El acceso a la plataforma está restringido exclusivamente a los roles operativos definidos, y se
+encuentra sujeto a controles de autenticación, autorización y trazabilidad.
+</p>
+
+<ul>
+    <li>El acceso se rige por el principio de <strong>mínimo privilegio</strong>.</li>
+    <li>Solo los roles autorizados pueden acceder a la plataforma.</li>
+    <li>La autenticación se realiza mediante <strong>Entra ID</strong> con <strong>MFA obligatorio</strong>.</li>
+    <li>Todos los accesos deben ser trazables y auditables.</li>
+</ul>
+
+<h2>8.2 Gestión de accesos</h2>
+
+<p>
+La administración de accesos a la plataforma se realiza conforme al modelo de gobierno definido y a
+las capacidades del proveedor.
+</p>
+
+<p>
+La responsabilidad de administrar usuarios y permisos dentro de <strong>Akamai Control Center</strong> depende
+del responsable del contrato, figura que puede variar según el esquema de contratación vigente.
+</p>
+
+<p>
+Independientemente de lo anterior, se establecen los siguientes lineamientos:
+</p>
+
+<ul>
+    <li>Los accesos se otorgan exclusivamente a usuarios autorizados.</li>
+    <li>Todos los accesos deben gestionarse a través de <strong>Entra ID</strong>.</li>
+    <li>Los permisos deben alinearse estrictamente con el rol funcional del usuario.</li>
+    <li>Los accesos deben revocarse cuando ya no sean necesarios.</li>
+</ul>
+
+<h2>8.3 Niveles de acceso por rol</h2>
+
+<ul>
+    <li>
+        <strong>Network Platform – Network Services:</strong>
+        Acceso administrativo funcional para la operación y configuración del servicio.
+    </li>
+    <li>
+        <strong>IT Ops – Network Services:</strong>
+        Acceso operativo limitado a la ejecución de tareas definidas dentro del modelo operativo.
+    </li>
+    <li>
+        <strong>CISO:</strong>
+        Acceso orientado a supervisión, auditoría y validación de controles de seguridad.
+    </li>
+    <li>
+        <strong>Application Owners:</strong>
+        No tienen acceso directo a la plataforma. Su participación se limita a la validación funcional
+        de los servicios y a la definición de requerimientos operativos.
+    </li>
+</ul>
+
+<h2>8.4 Controles de seguridad</h2>
+
+<ul>
+    <li>Autenticación obligatoria mediante <strong>Entra ID con MFA</strong>.</li>
+    <li>Revisión periódica de accesos para asegurar su vigencia.</li>
+    <li>Aplicación estricta del principio de mínimo privilegio.</li>
+    <li>Cumplimiento de las políticas corporativas de seguridad de la información.</li>
+</ul>
+
+<div class="footer">
+    Documento interno – Uso exclusivo de la organización
+</div>
+
+</body>
+</html>

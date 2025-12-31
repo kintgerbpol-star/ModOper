@@ -18,6 +18,11 @@ body {
     font-weight: 600;
 }
 
+.selectors {
+    display: flex;
+    align-items: center;
+}   
+
 .selectors select {
     margin-left: 10px;
     padding: 6px 10px;
@@ -27,7 +32,7 @@ body {
 }
 
 .content {
-    height: calc(100vh - 70px);
+    height: calc(100vh - 70px); 
 }
 
 iframe {
@@ -35,4 +40,35 @@ iframe {
     height: 100%;
     border: none;
     background: white;
+}
+
+/* Idiomas alineados a la derecha */
+.lang-switch {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 4px;
+    margin-left: 15px;
+}
+
+/* Botones de idioma */
+.lang-switch button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 12px;
+    padding: 2px 4px;
+    color: #444;
+    transition: all 0.2s ease;
+}
+
+.lang-switch button:hover {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* Idioma activo (opcional) */
+.lang-switch button.active {
+    font-weight: bold;
+    color: #000;
 }

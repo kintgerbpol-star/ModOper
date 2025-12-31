@@ -5,14 +5,17 @@
     <title>Modelo de Operación – Servicios de Red</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
 <header class="topbar">
-    <div class="title">Modelo de Operación – Servicios de Red</div>
+    <div class="title" data-i18n="app.title">
+        Modelo de Operación – Servicios de Red
+    </div>
 
     <div class="selectors">
         <select id="serviceSelect" onchange="loadContent()">
-            <option value="">Selecciona un servicio</option>
+            <option value="" data-i18n="select.service">Selecciona un servicio</option>
             <option value="IPAM">IPAM</option>
             <option value="Route53">Route53</option>
             <option value="CertificadosF5">Certificados F5</option>
@@ -22,7 +25,7 @@
         </select>
 
         <select id="sectionSelect" onchange="loadContent()">
-            <option value="">Selecciona una sección</option>
+            <option value="" data-i18n="select.section">Selecciona una sección</option>
             <option value="1Proposito">1. Propósito</option>
             <option value="2Alcance">2. Alcance</option>
             <option value="3DescServicio">3. Descripción del Servicio</option>
@@ -35,12 +38,50 @@
             <option value="10Responsables">10. Responsables</option>
             <option value="11Transicion">11. Transición</option>
         </select>
+
+        <!-- Selector de idioma -->
+        <div class="lang-switch">
+            <button onclick="setLanguage('es')">ES</button>
+            <button onclick="setLanguage('en')">EN</button>
+            <button onclick="setLanguage('pt')">PT</button>
+        </div>
     </div>
 </header>
 
 <main class="content">
     <iframe id="contentFrame"></iframe>
 </main>
+
+<script>
+    let currentLang = "es";
+
+    async function setLanguage(lang) {
+        currentLang = lang;
+        await loadLanguage(lang);
+
+        // Recargar contenido si ya hay algo cargado
+        const iframe = document.getElementById("contentFrame");
+        if (iframe.src) {
+            iframe.contentWindow.loadLanguage?.(lang);
+        }
+    }
+
+    async function loadLanguage(lang) {
+        try {
+            const response = await fetch(`i18n/${lang}.json`);
+            const translations = await response.json();
+
+            document.querySelectorAll("[data-i18n]").forEach(el => {
+                const key = el.getAttribute("data-i18n");
+                if (translations[key]) {
+                    el.innerHTML = translations[key];
+                }
+            });
+        } catch (e) {
+            console.error("Error cargando idioma:", e);
+        }
+    }
+</script>
 
 <script src="js/navigation.js"></script>
 

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>SaaS Load Balancing - Gestión de Seguridad y Accesos</title>
+
+    <style>
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            margin: 60px;
+            color: #1f2933;
+            line-height: 1.6;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 28px;
+            border-bottom: 3px solid #1f4fd8;
+            padding-bottom: 12px;
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            font-size: 20px;
+            margin-top: 35px;
+            color: #1f4fd8;
+        }
+
+        h3 {
+            font-size: 16px;
+            margin-top: 25px;
+            color: #1f4fd8;
+        }
+
+        p {
+            font-size: 14px;
+            margin: 12px 0;
+            text-align: justify;
+        }
+
+        ul {
+            margin-left: 25px;
+        }
+
+        li {
+            margin: 8px 0;
+            font-size: 14px;
+        }
+
+        .footer {
+            margin-top: 60px;
+            font-size: 12px;
+            color: #666;
+            border-top: 1px solid #ccc;
+            padding-top: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>8. Gestión de seguridad y accesos</h1>
+
+<h2>8.1 Principios de seguridad</h2>
+
+<p>
+La gestión de seguridad y accesos del servicio <strong>SaaS Load Balancing</strong> garantiza que únicamente
+personal autorizado pueda interactuar con la plataforma, bajo controles estrictos de identidad y acceso.
+</p>
+
+<ul>
+    <li>El acceso se rige por el principio de <strong>mínimo privilegio</strong>.</li>
+    <li>Solo los roles definidos pueden acceder a la plataforma.</li>
+    <li>La autenticación se realiza mediante <strong>Entra ID</strong> con <strong>MFA obligatorio</strong>.</li>
+    <li>Los accesos deben ser auditables y revisados periódicamente.</li>
+</ul>
+
+<h2>8.2 Gestión de accesos</h2>
+
+<p>
+La administración de accesos a la plataforma depende del responsable del contrato y del modelo de
+operación vigente.
+</p>
+
+<p>
+Independientemente de lo anterior:
+</p>
+
+<ul>
+    <li>Todos los accesos deben gestionarse mediante <strong>Entra ID</strong>.</li>
+    <li>Los permisos deben alinearse con el rol funcional del usuario.</li>
+    <li>Los accesos deben revocarse cuando ya no sean necesarios.</li>
+</ul>
+
+<h2>8.3 Niveles de acceso por rol</h2>
+
+<ul>
+    <li>
+        <strong>Network Platform – Network Services:</strong>
+        Acceso administrativo funcional para la operación del servicio.
+    </li>
+    <li>
+        <strong>IT Ops – Network Services:</strong>
+        Acceso operativo limitado a tareas autorizadas.
+    </li>
+    <li>
+        <strong>CISO:</strong>
+        Acceso orientado a supervisión, control y auditoría.
+    </li>
+    <li>
+        <strong>Application Owners:</strong>
+        No tienen acceso directo a la plataforma; participan únicamente en validaciones funcionales.
+    </li>
+</ul>
+
+<h2>8.4 Controles de seguridad</h2>
+
+<ul>
+    <li>Autenticación obligatoria mediante <strong>Entra ID con MFA</strong>.</li>
+    <li>Revisión periódica de accesos.</li>
+    <li>Cumplimiento de las políticas corporativas de seguridad.</li>
+    <li>Registro y trazabilidad de accesos.</li>
+</ul>
+
+<div class="footer">
+    Documento interno – Uso exclusivo de la organización
+</div>
+
+</body>
+</html>

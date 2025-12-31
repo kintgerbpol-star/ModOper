@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>SaaS Load Balancing - Matriz RACI</title>
+
+    <style>
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            margin: 60px;
+            color: #1f2933;
+            line-height: 1.6;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 28px;
+            border-bottom: 3px solid #1f4fd8;
+            padding-bottom: 12px;
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            font-size: 20px;
+            margin-top: 35px;
+            color: #1f4fd8;
+        }
+
+        h3 {
+            font-size: 16px;
+            margin-top: 25px;
+            color: #1f4fd8;
+        }
+
+        p {
+            font-size: 14px;
+            margin: 12px 0;
+            text-align: justify;
+        }
+
+        ul {
+            margin-left: 25px;
+        }
+
+        li {
+            margin: 8px 0;
+            font-size: 14px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        th {
+            background-color: #f0f3f7;
+        }
+
+        .footer {
+            margin-top: 60px;
+            font-size: 12px;
+            color: #666;
+            border-top: 1px solid #ccc;
+            padding-top: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>6. Matriz RACI</h1>
+
+<h2>6.1 Roles considerados</h2>
+
+<ul>
+    <li><strong>Network Platform – Network Services (NP-NS):</strong> Responsable funcional del servicio.</li>
+    <li><strong>IT Ops – Network Services (IT Ops):</strong> Responsable de la operación diaria del servicio.</li>
+    <li><strong>CISO:</strong> Responsable de la autorización para la exposición de aplicaciones a Internet.</li>
+    <li><strong>Application Owners:</strong> Responsables funcionales de las aplicaciones expuestas.</li>
+</ul>
+
+<h2>6.2 Matriz RACI – SaaS Load Balancing</h2>
+
+<table>
+    <tr>
+        <th>Actividad</th>
+        <th>Network Platform<br>(NP-NS)</th>
+        <th>IT Ops</th>
+        <th>CISO</th>
+        <th>Application Owners</th>
+    </tr>
+    <tr>
+        <td>Configuración de balanceadores</td>
+        <td><strong>A</strong></td>
+        <td><strong>R</strong></td>
+        <td>I</td>
+        <td>C</td>
+    </tr>
+    <tr>
+        <td>Definición de parámetros de la aplicación</td>
+        <td>C</td>
+        <td>I</td>
+        <td>I</td>
+        <td><strong>R</strong></td>
+    </tr>
+    <tr>
+        <td>Autorización para exposición a Internet</td>
+        <td>I</td>
+        <td>I</td>
+        <td><strong>R</strong></td>
+        <td><strong>A</strong></td>
+    </tr>
+    <tr>
+        <td>Validación funcional del servicio</td>
+        <td><strong>A</strong></td>
+        <td>I</td>
+        <td>I</td>
+        <td><strong>R</strong></td>
+    </tr>
+    <tr>
+        <td>Revisión de accesos a la plataforma</td>
+        <td>C</td>
+        <td>R</td>
+        <td><strong>A</strong></td>
+        <td>I</td>
+    </tr>
+</table>
+
+<h2>6.3 Consideraciones adicionales</h2>
+
+<ul>
+    <li>La responsabilidad final sobre la exposición de aplicaciones a Internet recae en el <strong>Application Owner</strong>, con autorización explícita del <strong>CISO</strong>.</li>
+    <li>Los equipos operativos ejecutan acciones conforme a los lineamientos definidos.</li>
+    <li>La segregación de funciones es obligatoria para garantizar control y trazabilidad.</li>
+</ul>
+
+<div class="footer">
+    Documento interno – Uso exclusivo de la organización
+</div>
+
+</body>
+</html>

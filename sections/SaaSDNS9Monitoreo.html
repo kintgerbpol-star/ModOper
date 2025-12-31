@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>SaaS DNS - Monitoreo y Métricas</title>
+
+    <style>
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            margin: 60px;
+            color: #1f2933;
+            line-height: 1.6;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 28px;
+            border-bottom: 3px solid #1f4fd8;
+            padding-bottom: 12px;
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            font-size: 20px;
+            margin-top: 35px;
+            color: #1f4fd8;
+        }
+
+        h3 {
+            font-size: 16px;
+            margin-top: 25px;
+            color: #1f4fd8;
+        }
+
+        p {
+            font-size: 14px;
+            margin: 12px 0;
+            text-align: justify;
+        }
+
+        ul {
+            margin-left: 25px;
+        }
+
+        li {
+            margin: 8px 0;
+            font-size: 14px;
+        }
+
+        .footer {
+            margin-top: 60px;
+            font-size: 12px;
+            color: #666;
+            border-top: 1px solid #ccc;
+            padding-top: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>9. Monitoreo y métricas</h1>
+
+<h2>9.1 Principios de monitoreo</h2>
+
+<p>
+El servicio <strong>SaaS DNS</strong> opera bajo un modelo en el cual el monitoreo de la infraestructura,
+capacidad y componentes internos es responsabilidad exclusiva del proveedor.
+</p>
+
+<p>
+La organización no cuenta con visibilidad directa sobre la infraestructura subyacente ni sobre
+métricas técnicas internas del servicio, por lo que el monitoreo se basa en la observación del
+comportamiento funcional del servicio y en la información proporcionada por el proveedor.
+</p>
+
+<ul>
+    <li>El monitoreo se enfoca en la disponibilidad y comportamiento del servicio.</li>
+    <li>No se realiza monitoreo de infraestructura ni componentes internos.</li>
+    <li>El enfoque es coherente con un modelo <strong>SaaS</strong>.</li>
+</ul>
+
+<h2>9.2 Fuentes de información y monitoreo</h2>
+
+<p>
+El monitoreo del servicio se apoya en las siguientes fuentes:
+</p>
+
+<ul>
+    <li>Notificaciones y comunicaciones oficiales emitidas por el proveedor.</li>
+    <li>Validaciones funcionales realizadas por los equipos internos.</li>
+    <li>Observaciones generadas por herramientas de monitoreo externas, cuando aplique.</li>
+</ul>
+
+<h2>9.3 Gestión de alertas</h2>
+
+<p>
+Las alertas relacionadas con el servicio pueden originarse a partir de:
+</p>
+
+<ul>
+    <li>Comunicaciones del proveedor sobre eventos o degradaciones.</li>
+    <li>Detección de fallas funcionales por parte de los equipos internos.</li>
+    <li>Reportes de usuarios o sistemas consumidores del servicio.</li>
+</ul>
+
+<p>
+Todas las alertas deben ser gestionadas mediante <strong>ServiceNow</strong>, siguiendo los procesos de
+gestión de incidentes definidos por la organización.
+</p>
+
+<h2>9.4 Métricas consideradas</h2>
+
+<p>
+Dado el modelo SaaS, las métricas se enfocan en indicadores de resultado y experiencia, tales como:
+</p>
+
+<ul>
+    <li>Disponibilidad percibida del servicio.</li>
+    <li>Tiempo de resolución de incidentes.</li>
+    <li>Impacto a servicios dependientes.</li>
+    <li>Cumplimiento de los niveles de servicio definidos por el proveedor.</li>
+</ul>
+
+<p>
+No se consideran métricas de infraestructura, uso de recursos o telemetría interna del proveedor.
+</p>
+
+<h2>9.5 Responsabilidades</h2>
+
+<ul>
+    <li><strong>Proveedor:</strong> Monitoreo y operación de la plataforma.</li>
+    <li><strong>Network Platform – Network Services:</strong> Análisis técnico y coordinación interna.</li>
+    <li><strong>IT Ops:</strong> Gestión operativa de incidentes.</li>
+    <li><strong>Incident Management:</strong> Evaluación del impacto y comunicación con el negocio.</li>
+    <li><strong>Application Owners:</strong> Validación funcional del servicio.</li>
+</ul>
+
+<div class="footer">
+    Documento interno – Uso exclusivo de la organización
+</div>
+
+</body>
+</html>

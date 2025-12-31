@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>SaaS DNS - Procesos Operativos</title>
+
+    <style>
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            margin: 60px;
+            color: #1f2933;
+            line-height: 1.6;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 28px;
+            border-bottom: 3px solid #1f4fd8;
+            padding-bottom: 12px;
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            font-size: 20px;
+            margin-top: 35px;
+            color: #1f4fd8;
+        }
+
+        h3 {
+            font-size: 16px;
+            margin-top: 25px;
+            color: #1f4fd8;
+        }
+
+        p {
+            font-size: 14px;
+            margin: 12px 0;
+            text-align: justify;
+        }
+
+        ul {
+            margin-left: 25px;
+        }
+
+        li {
+            margin: 8px 0;
+            font-size: 14px;
+        }
+
+        .footer {
+            margin-top: 60px;
+            font-size: 12px;
+            color: #666;
+            border-top: 1px solid #ccc;
+            padding-top: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>7. Procesos Operativos</h1>
+
+<h2>7.1 Gestión de cambios</h2>
+
+<p>
+La gestión de cambios del servicio <strong>SaaS DNS</strong> tiene como objetivo asegurar que cualquier
+modificación se realice de forma controlada, documentada y autorizada, minimizando riesgos
+operativos y de seguridad.
+</p>
+
+<h3>7.1.1 Alcance</h3>
+<ul>
+    <li>Alta, baja o modificación de registros DNS.</li>
+    <li>Cambios asociados a la exposición de servicios a Internet.</li>
+    <li>Ajustes derivados de requerimientos funcionales o técnicos.</li>
+</ul>
+
+<h3>7.1.2 Flujo general</h3>
+<ul>
+    <li>Todas las solicitudes de cambio deben registrarse en <strong>ServiceNow</strong>.</li>
+    <li>Las solicitudes deben incluir justificación, análisis de impacto y servicios involucrados.</li>
+    <li>Los cambios que impliquen exposición de servicios a Internet requieren autorización previa del <strong>CISO</strong>.</li>
+    <li><strong>IT Ops</strong> ejecuta los cambios conforme a los procedimientos establecidos.</li>
+    <li>El <strong>Application Owner</strong> valida funcionalmente los cambios una vez implementados.</li>
+</ul>
+
+<h2>7.2 Gestión de incidentes</h2>
+
+<p>
+La gestión de incidentes tiene como objetivo restaurar la operación normal del servicio ante
+interrupciones, degradaciones o comportamientos anómalos.
+</p>
+
+<h3>7.2.1 Alcance</h3>
+<ul>
+    <li>Incidentes relacionados con la resolución de nombres de servicios expuestos a Internet.</li>
+    <li>Degradaciones que impacten la disponibilidad o experiencia del usuario.</li>
+</ul>
+
+<h3>7.2.2 Flujo general</h3>
+<ul>
+    <li>Los incidentes se registran en <strong>ServiceNow</strong>.</li>
+    <li>El equipo de <strong>Incident Management</strong> evalúa el impacto, define la severidad y mantiene la comunicación con el negocio.</li>
+    <li><strong>IT Ops</strong> realiza el análisis técnico y las acciones de contención necesarias.</li>
+    <li>Cuando es requerido, se coordina la atención con el proveedor.</li>
+    <li>El <strong>CISO</strong> es notificado cuando existe impacto relevante de seguridad.</li>
+    <li>El cierre del incidente se realiza una vez validada la restauración por el <strong>Application Owner</strong>.</li>
+</ul>
+
+<h2>7.3 Gestión de solicitudes</h2>
+
+<p>
+La gestión de solicitudes permite atender requerimientos operativos relacionados con el servicio.
+</p>
+
+<h3>7.3.1 Alcance</h3>
+<ul>
+    <li>Solicitudes de creación o modificación de registros DNS.</li>
+    <li>Solicitudes de información relacionadas con el servicio.</li>
+    <li>Solicitudes de acceso conforme a los roles definidos.</li>
+</ul>
+
+<h3>7.3.2 Flujo general</h3>
+<ul>
+    <li>Todas las solicitudes deben registrarse en <strong>ServiceNow</strong>.</li>
+    <li><strong>IT Ops</strong> gestiona la atención conforme a los procedimientos definidos.</li>
+    <li>Las solicitudes que impliquen exposición a Internet requieren autorización del <strong>CISO</strong>.</li>
+    <li>La solicitud se considera cerrada tras la validación de su correcta ejecución.</li>
+</ul>
+
+<div class="footer">
+    Documento interno – Uso exclusivo de la organización
+</div>
+
+</body>
+</html>
