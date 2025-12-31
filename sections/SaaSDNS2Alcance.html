@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>SaaS DNS - Alcance del Servicio</title>
+
+    <style>
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            margin: 60px;
+            color: #1f2933;
+            line-height: 1.6;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 28px;
+            border-bottom: 3px solid #1f4fd8;
+            padding-bottom: 12px;
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            font-size: 20px;
+            margin-top: 35px;
+            color: #1f4fd8;
+        }
+
+        h3 {
+            font-size: 16px;
+            margin-top: 25px;
+            color: #1f4fd8;
+        }
+
+        p {
+            font-size: 14px;
+            margin: 12px 0;
+            text-align: justify;
+        }
+
+        ul {
+            margin-left: 25px;
+        }
+
+        li {
+            margin: 8px 0;
+            font-size: 14px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+            font-size: 14px;
+        }
+
+        th {
+            background-color: #f0f3f7;
+        }
+
+        .footer {
+            margin-top: 60px;
+            font-size: 12px;
+            color: #666;
+            border-top: 1px solid #ccc;
+            padding-top: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>2. Alcance del servicio</h1>
+
+<p>
+El servicio <strong>SaaS DNS</strong> comprende la provisión y uso de capacidades de resolución de nombres de
+dominio mediante la plataforma <strong>Akamai Edge DNS</strong>, incluyendo el uso de capacidades de
+<strong>Global Traffic Management (GTM)</strong> cuando estas formen parte del modelo de resolución definido.
+</p>
+
+<p>
+El servicio se consume bajo un modelo de <strong>Software as a Service (SaaS)</strong>, en el cual la
+infraestructura, la disponibilidad de la plataforma, la supervisión del servicio y los procesos de
+mantenimiento, actualización y corrección de vulnerabilidades son responsabilidad del proveedor.
+La organización actúa como consumidora del servicio, operando únicamente sobre los elementos de
+configuración y datos permitidos por la plataforma.
+</p>
+
+<p>
+El alcance del servicio cubre los componentes necesarios para soportar la publicación, resolución y
+disponibilidad de nombres de dominio utilizados por aplicaciones, servicios y plataformas de la
+organización, tanto en entornos productivos como no productivos.
+</p>
+
+<h2>2.1 Componentes incluidos</h2>
+
+<ul>
+    <li>Gestión de zonas DNS públicas y privadas soportadas por la plataforma Akamai.</li>
+    <li>Administración de registros DNS conforme a los lineamientos operativos definidos.</li>
+    <li>Uso de capacidades de GTM cuando estas formen parte del diseño de resolución y direccionamiento del tráfico.</li>
+    <li>Soporte para escenarios donde Akamai opera como <strong>DNS primario</strong> o <strong>DNS secundario</strong>.</li>
+    <li>Consumo de las capacidades del servicio conforme a las opciones habilitadas por la plataforma.</li>
+</ul>
+
+<h2>2.2 Componentes fuera de alcance</h2>
+
+<ul>
+    <li>Administración de la infraestructura subyacente asociada a la plataforma de DNS.</li>
+    <li>Monitoreo, mantenimiento, parchado o actualización de la plataforma, los cuales son responsabilidad del proveedor.</li>
+    <li>Diseño, desarrollo o modificación de aplicaciones que consuman el servicio DNS.</li>
+    <li>Gestión de conectividad de red fuera del alcance del servicio.</li>
+    <li>Administración de servicios que no formen parte directa del modelo de DNS provisto por Akamai.</li>
+</ul>
+
+<h2>2.3 Consideraciones operativas</h2>
+
+<p>
+El servicio puede operar bajo distintos esquemas, dependiendo del modelo de implementación definido:
+</p>
+
+<ul>
+    <li>
+        <strong>Akamai como DNS primario:</strong>
+        el servicio permite la administración de registros DNS conforme a los controles y restricciones definidos por la plataforma.
+    </li>
+    <li>
+        <strong>Akamai como DNS secundario:</strong>
+        la administración de los registros se realiza en plataformas externas, limitándose el alcance del servicio a la sincronización y resolución.
+    </li>
+</ul>
+
+<p>
+Las responsabilidades operativas, niveles de acceso y flujos de gestión asociados a cada modalidad se
+detallan en secciones posteriores del presente documento.
+</p>
+
+<div class="footer">
+    Documento interno – Uso exclusivo de la organización
+</div>
+
+</body>
+</html>

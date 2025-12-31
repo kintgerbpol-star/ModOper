@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>SaaS Load Balancing - Stakeholders y Roles</title>
+
+    <style>
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            margin: 60px;
+            color: #1f2933;
+            line-height: 1.6;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 28px;
+            border-bottom: 3px solid #1f4fd8;
+            padding-bottom: 12px;
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            font-size: 20px;
+            margin-top: 35px;
+            color: #1f4fd8;
+        }
+
+        h3 {
+            font-size: 16px;
+            margin-top: 25px;
+            color: #1f4fd8;
+        }
+
+        p {
+            font-size: 14px;
+            margin: 12px 0;
+            text-align: justify;
+        }
+
+        ul {
+            margin-left: 25px;
+        }
+
+        li {
+            margin: 8px 0;
+            font-size: 14px;
+        }
+
+        .footer {
+            margin-top: 60px;
+            font-size: 12px;
+            color: #666;
+            border-top: 1px solid #ccc;
+            padding-top: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>4. Stakeholders y roles</h1>
+
+<h2>4.1 Network Platform – Network Services</h2>
+
+<p><strong>Rol:</strong> Responsable funcional del servicio.</p>
+
+<p><strong>Responsabilidades:</strong></p>
+<ul>
+    <li>Definir el modelo operativo y los lineamientos técnicos del servicio.</li>
+    <li>Asegurar la correcta configuración funcional del servicio.</li>
+    <li>Proveer soporte de segundo nivel (N2).</li>
+    <li>Coordinar con el proveedor ante incidentes o situaciones que requieran intervención especializada.</li>
+</ul>
+
+<h2>4.2 IT Ops – Network Services</h2>
+
+<p><strong>Rol:</strong> Responsable de la operación diaria del servicio.</p>
+
+<p><strong>Responsabilidades:</strong></p>
+<ul>
+    <li>Ejecutar actividades operativas conforme a los procedimientos establecidos.</li>
+    <li>Atender solicitudes relacionadas con la configuración y operación del servicio.</li>
+    <li>Validar la correcta implementación de cambios y ajustes operativos.</li>
+    <li>Escalar eventos fuera de su alcance según los flujos definidos.</li>
+</ul>
+
+<h2>4.3 Application Owners</h2>
+
+<p><strong>Rol:</strong> Responsables funcionales de las aplicaciones expuestas mediante el servicio de Load Balancing.</p>
+
+<p><strong>Responsabilidades:</strong></p>
+<ul>
+    <li>Proporcionar la información técnica necesaria para la correcta integración de la aplicación con el servicio.</li>
+    <li>Definir requerimientos de conectividad, puertos, protocolos y comportamiento esperado del tráfico.</li>
+    <li>Validar el funcionamiento de la aplicación una vez integrada al servicio.</li>
+    <li>Coordinar con los equipos de Network Services ante cambios o incidencias.</li>
+</ul>
+
+<h2>4.4 CISO</h2>
+
+<p><strong>Rol:</strong> Responsable del gobierno y la relación con el proveedor en temas de seguridad.</p>
+
+<p><strong>Responsabilidades:</strong></p>
+<ul>
+    <li>Gestionar la relación con el proveedor en materia de seguridad.</li>
+    <li>Coordinar la atención de incidentes de seguridad.</li>
+    <li>Asegurar la alineación del servicio con las políticas corporativas de seguridad.</li>
+    <li>Supervisar revisiones y evaluaciones de riesgo asociadas al servicio.</li>
+</ul>
+
+<h2>4.5 Otros actores relevantes</h2>
+
+<p><strong>Equipos consumidores del servicio:</strong></p>
+
+<ul>
+    <li>Utilizan el servicio de balanceo para exponer aplicaciones a Internet.</li>
+    <li>Deben cumplir con los lineamientos definidos para el uso del servicio.</li>
+    <li>No administran la infraestructura ni los componentes internos de la plataforma.</li>
+</ul>
+
+<div class="footer">
+    Documento interno – Uso exclusivo de la organización
+</div>
+
+</body>
+</html>
